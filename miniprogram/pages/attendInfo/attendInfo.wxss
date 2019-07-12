@@ -1,0 +1,12 @@
+/* pages/attendInfo/attendInfo.wxss */
+@import "../message/message.wxss";
+
+.mes .list .item .one {
+  display: block;
+}
+
+.mes .list .item .one view {
+ font-size: 28rpx;
+ line-height: 60rpx;
+ color: #666;
+}

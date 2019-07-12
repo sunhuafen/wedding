@@ -11,10 +11,18 @@ Page({
       nickName: '',
       name: '',
       phone: '',
-      peopleNum: 0,
+      peopleNum: 1,
       remark: ''
     },
-    isFirst: true
+    isFirst: true,
+    attendNumList: [
+      { name: '自己出席', value: 1 },
+      { name: '两人出席', value: 2 },
+      { name: '三人出席', value: 3 },
+      { name: '三人以上', value: 4 }
+    ],
+    attendIsEdit: false,
+    isMainPeople: false,
   },
 
   // 获取留言列表
@@ -83,12 +91,8 @@ Page({
     })
   },
 
-  // 打开或者取消出席信息页面
+  // 切换显示的页面
   changePage: function(e) {
-    if (e.target.dataset.type) { // 打开
-      // 查询是否已经填过信息
-      this.getOpenId();
-    }
     this.setData({
       isMainPage: !this.data.isMainPage
     })
@@ -101,10 +105,17 @@ Page({
       name: 'user',
       data: {}
     }).then(res => {
+      let peopleOpenId = res.result.openid;
+      let isMainPeople = false;
+      if (peopleOpenId === 'oQKAQ5V2Q-RJ0FbYWBUVuLRHRu3g') { // 主要管理员可以查看出席人信息
+        isMainPeople = true;
+      }
       that.setData({
-        openId: res.result.openid
+        isMainPeople: isMainPeople,
+        openId: peopleOpenId
       })
       that.getIsExist();
+      that.changePage();
     })
   },
 
@@ -116,18 +127,15 @@ Page({
       '_openid': that.data.openId
     }).get({
       success: res => {
-        console.log(res);
         if (res.data.length != 0) { // 已经填写过
-          let info = res.data[0].info;
-          info.peopleNum = parseInt(info.peopleNum);
+          let info = res.data[0];
           that.setData({
             isFirst: false,
             attendInfo: info
           })
         } else {
           that.setData({
-            isFirst: true,
-            attendInfo: info
+            isFirst: true
           })
         }
       },
@@ -153,27 +161,54 @@ Page({
 
   // 出席信息提交
   attendSubmit: function (e) {
+
     let info = e.detail.value;
-    if (info.name === '') {+
+    let isEdit = e.detail.target.dataset.type;
+    console.log(isEdit);
+    console.log(e);
+
+    if (info.name === '') {
       wx.showToast({ icon: 'none', title: '请输入姓名~' });
     } else if (info.phone === '') {
       wx.showToast({ icon: 'none', title: '请输入电话~' });
     } else {
       let cloud = wx.cloud.database();
       let that = this;
+      let attendId = that.data.attendInfo._id;
       info.nickName = 'Zz';
-      cloud.collection('attendList').add({
-        data: {info},
-        success: function (res) {
-          wx.showToast({ icon: 'none', title: '保存成功，谢谢~' });
-          // 获取祝福列表
-          that.changePage();
-        },
-        fail: err => {
-          wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
-        }
-      })
+
+      if (isEdit) { // 编辑
+        cloud.collection('attendList').doc(attendId).update({
+          data: info,
+          success: function (res) {
+            wx.showToast({ icon: 'none', title: '保存成功，谢谢~' });
+            that.changePage();
+          },
+          fail: err => {
+            wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
+          }
+        })
+      } else { // 新增
+        cloud.collection('attendList').add({
+          data: info,
+          success: function (res) {
+            wx.showToast({ icon: 'none', title: '保存成功，谢谢~' });
+            that.changePage();
+          },
+          fail: err => {
+            wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
+          }
+        })
+      }
     }
+  },
+
+  // 开启出席信息编辑
+  isFirstChange: function () {
+    this.setData({
+      isFirst: !this.data.isFirst,
+      attendIsEdit: true
+    })
   },
 
   onLoad: function () {

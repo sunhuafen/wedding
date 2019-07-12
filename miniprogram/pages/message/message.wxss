@@ -235,3 +235,13 @@
   top: 120rpx;
   transform: rotate(-90deg);
 }
+
+.row_a {
+  padding: 50rpx;
+  justify-content: center;
+}
+
+.row_a navigatorurl:hover {
+  text-decoration: underline;
+  background: none;
+}

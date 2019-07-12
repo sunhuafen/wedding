@@ -19,6 +19,10 @@ input, textarea {
   border-radius: 5rpx;
 }
 
+input[disabled], textarea[disabled] {
+  background: #e6e6e6;
+}
+
 .page .posi_fixed {
   position: fixed;
 }

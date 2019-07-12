@@ -1,0 +1,26 @@
+<!--pages/attendInfo/attendInfo.wxml-->
+<view class='page mes'>
+  <image class='img_23 posi_fixed' src='../../images/icon/23.png'></image>
+  <image class='img_18 posi_fixed' src='../../images/icon/18.png'></image>
+  <image class='img_7 posi_fixed' src='../../images/icon/7.png'></image>
+  <image class='img_17 posi_fixed' src='../../images/icon/17.png'></image>
+  <image class='img_16 posi_fixed' src='../../images/icon/16.png'></image>
+  <image class='img_20 posi_fixed' src='../../images/icon/20.png'></image>
+  <image class='img_9 posi_fixed' src='../../images/icon/9.png'></image>
+  <image class='img_24 posi_fixed' src='../../images/icon/24.png'></image>
+  
+  <view class="list posi_fixed">
+    <view class='item' wx:for='{{attendList}}' wx:key='{{item._id}}'>
+      <image class='head' src='{{item.avatarUrl}}'></image>
+      <view class='cont'>
+        <view class='one'>
+          <view>姓名：{{item.name}}</view>
+          <view>微信昵称：{{item.nickName}}</view>
+          <view>手机号：{{item.phone}}</view>
+          <view>参加人数：{{item.peopleNum}}</view>
+        </view>
+        <view class='two'>备注：{{item.remark}}</view>
+      </view>
+    </view>
+  </view>
+</view>

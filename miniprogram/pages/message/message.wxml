@@ -31,7 +31,7 @@
       </view>
       <view class='btn' wx:else>
         <button class='left' bindtap='openEdit' open-type="getUserInfo">说点啥吧</button>
-        <button class='right' data-type='open' bindtap='changePage'>我要出席</button>
+        <button class='right' bindtap='getOpenId'>我要出席</button>
       </view>
     </view>
   </view>
@@ -51,21 +51,27 @@
       </view>
       <view class='row row_two'>
         <label class='tit tit_two'>几人出席</label>
-        <radio-group name='peopleNum'  disabled='{{!isFirst}}'>
-          <label><radio value="1" checked='{{attendInfo.peopleNum == 1}}' />自己出席</label>
-          <label><radio value="2" checked='{{attendInfo.peopleNum == 2}}' />两人出席</label>
-          <label><radio value="3" checked='{{attendInfo.peopleNum == 3}}' />三人出席</label>
-          <label><radio value="4" checked='{{attendInfo.peopleNum == 4}}' />三人以上</label>
+        <radio-group name='peopleNum'>
+          <label wx:for='{{attendNumList}}' wx:key='{{item.value}}'>
+            <radio value='{{item.value}}' checked='{{attendInfo.peopleNum == item.value}}'  disabled='{{!isFirst}}' />{{item.name}}
+          </label>
         </radio-group>
       </view>
       <view class='row row_two'>
         <label class='tit tit_two'>备注</label>
         <textarea disabled='{{!isFirst}}' name='remark' value='{{attendInfo.remark}}' placeholder='请填写您的备注信息'></textarea>
       </view>
-      <view class='row btn'>
-        <button form-type="submit" class='left'>确认提交</button>
-        <!-- <view class='left'>确认提交</view> -->
+      <view class='row btn' wx:if='{{isFirst}}'>
+        <button form-type="submit" data-type='{{attendIsEdit}}' class='left'>确认提交</button>
         <button class='right' bindtap='changePage'>取消</button>
+      </view> 
+      <view class='row btn' wx:else>
+        <button class='left' bindtap='isFirstChange'>重新编辑</button>
+        <button class='right' bindtap='changePage'>返回</button>
+      </view>
+
+      <view class='row row_a' wx-if='{{isMainPeople}}'>
+        <navigator url="../attendInfo/attendInfo">出席信息</navigator>
       </view>
     </form>
   </view>
