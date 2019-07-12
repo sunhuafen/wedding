@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/message/message",
+    "pages/greet/greet",
+    "pages/photo/photo",
+    "pages/invite/invite",
+    "pages/nav/nav"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "我的邀请函",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/invite/invite",
+        "text": "婚礼邀请",
+        "iconPath": "images/nav/bar_invite.png",
+        "selectedIconPath": "images/nav/bar_invite_active.png"
+      },
+      {
+        "pagePath": "pages/photo/photo",
+        "text": "甜蜜美照",
+        "iconPath": "images/nav/bar_photo.png",
+        "selectedIconPath": "images/nav/bar_photo_active.png"
+      },
+      {
+        "pagePath": "pages/nav/nav",
+        "text": "酒店位置",
+        "iconPath": "images/nav/bar_nav.png",
+        "selectedIconPath": "images/nav/bar_nav_active.png"
+      },
+      {
+        "pagePath": "pages/greet/greet",
+        "text": "好友祝福",
+        "iconPath": "images/nav/bar_greet.png",
+        "selectedIconPath": "images/nav/bar_greet_active.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "留言评论",
+        "iconPath": "images/nav/bar_mes.png",
+        "selectedIconPath": "images/nav/bar_mes_active.png"
+      }
+    ],
+    "color": "#ccc",
+    "selectedColor": "#bd3939",
+    "backgroundColor": "#fff"
+  }
+}

@@ -1,0 +1,30 @@
+<!--pages/invite/invite.wxml-->
+<view class="page invite">
+  <image class='img_13 posi_fixed img_posi1' src='../../images/icon/13.png'></image>
+  <image class='img_2 posi_fixed img_posi2' src='../../images/icon/2.png'></image>
+  <image class='img_3 posi_fixed img_posi3' src='../../images/icon/3.png'></image>
+  <image class='img_4 posi_fixed img_posi4' src='../../images/icon/4.png'></image>
+  <image class='img_5 posi_fixed img_posi5' src='../../images/icon/5.png'></image>
+  <image class='img_6 posi_fixed img_posi6' src='../../images/icon/6.png'></image>
+  <image class='photo_1 posi_fixed img_bor_shadow' src='{{photo}}'></image>
+  <image class='img_24 posi_fixed img_posi7' src='../../images/icon/24.png'></image>
+  <image class='img_8 posi_fixed img_posi8' src='../../images/icon/8.png'></image>
+  <image class='img_7 posi_fixed img_posi9' src='../../images/icon/7.png'></image>
+  <image class='img_27 posi_fixed img_posi10' src='../../images/icon/27.png'></image>
+  <view class='posi_fixed name'>徐铸  &  孙华芬</view>
+  <view class='posi_fixed text text1'>婚礼谨定于</view>
+  <view class='posi_fixed text text2'>2019年8月26号</view>
+  <view class='posi_fixed text text3'>洛阳市秀水百合酒店百合厅</view>
+  <view class='posi_fixed text text4'>期待您见证我们婚礼</view>
+  <image class='img_14 posi_fixed' src='../../images/icon/14.png'></image>
+  <image class='img_15 posi_fixed' src='../../images/icon/15.png'></image>
+  <image class='img_28 posi_fixed img_posi11' src='../../images/icon/28.png'></image>
+  <image class='img_28 posi_fixed img_posi12' src='../../images/icon/28.png'></image>
+  <image class='img_13 posi_fixed img_posi13' src='../../images/icon/13.png'></image>
+  <image class='img_13 posi_fixed img_posi14' src='../../images/icon/13.png'></image>
+  <image class='img_6 posi_fixed img_posi15' src='../../images/icon/6.png'></image>
+  <image class='img_23 posi_fixed img_posi16' src='../../images/icon/23.png'></image>
+  <image class='img_5 posi_fixed img_posi17' src='../../images/icon/5.png'></image>
+  <image class='img_16 posi_fixed img_posi18' src='../../images/icon/16.png'></image>
+  <image class='img_17 posi_fixed img_posi19' src='../../images/icon/17.png'></image>
+</view>

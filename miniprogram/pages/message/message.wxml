@@ -1,0 +1,72 @@
+<!--pages/message/message.wxml-->
+<view class='page mes'>
+  <image class='img_23 posi_fixed' src='../../images/icon/23.png'></image>
+  <image class='img_18 posi_fixed' src='../../images/icon/18.png'></image>
+  <image class='img_7 posi_fixed' src='../../images/icon/7.png'></image>
+  <image class='img_17 posi_fixed' src='../../images/icon/17.png'></image>
+  <image class='img_16 posi_fixed' src='../../images/icon/16.png'></image>
+  <!-- <image class='img_20 posi_fixed' src='../../images/icon/20.png'></image> -->
+  <image class='img_9 posi_fixed' src='../../images/icon/9.png'></image>
+  <image class='img_24 posi_fixed' src='../../images/icon/24.png'></image>
+  <view wx:if='{{isMainPage}}'>
+    <view class="list posi_fixed {{isEdit? 'list_top':''}}">
+      <view class='item' wx:for='{{mesList}}' wx:key='{{item._id}}'>
+        <image class='head' src='{{item.avatarUrl}}'></image>
+        <view class='cont'>
+          <view class='one'>
+            <view class='name'>{{item.nickName}}</view>
+            <view class='time'>{{item.time}}</view>
+          </view>
+          <view class='two'>{{item.mesCont}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='footer posi_fixed'>
+      <view class='edit_mes' wx:if='{{isEdit}}'>
+        <textarea value='{{mesCont}}' bindinput='inputEdit' placeholder='说点啥吧'></textarea>
+      </view>
+      <view class='btn' wx:if='{{isEdit}}'>
+        <button class='left' bindtap='addMes'>发表留言</button>
+        <button class='right' bindtap='closeEdit'>取消</button>
+      </view>
+      <view class='btn' wx:else>
+        <button class='left' bindtap='openEdit' open-type="getUserInfo">说点啥吧</button>
+        <button class='right' data-type='open' bindtap='changePage'>我要出席</button>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else class='attend posi_fixed'>
+    <view class='title'>出席信息</view>
+    <form bindsubmit='attendSubmit' class='attend_form'>
+      <view class='row'>
+        <image class='img_37' src='../../images/icon/37.png'></image>
+        <label class='tit'>姓名<text>*</text></label>
+        <input type='text' disabled='{{!isFirst}}' name='name' value='{{attendInfo.name}}' bindinput='inputEdit' placeholder='怎么称呼您？'></input>
+      </view>
+      <view class='row'>
+        <image class='img_38' src='../../images/icon/38.png'></image>
+        <label class='tit'>电话<text>*</text></label>
+        <input type='text' disabled='{{!isFirst}}' name='phone' value='{{attendInfo.phone}}' placeholder='请填写有效的手机号'></input>
+      </view>
+      <view class='row row_two'>
+        <label class='tit tit_two'>几人出席</label>
+        <radio-group name='peopleNum'  disabled='{{!isFirst}}'>
+          <label><radio value="1" checked='{{attendInfo.peopleNum == 1}}' />自己出席</label>
+          <label><radio value="2" checked='{{attendInfo.peopleNum == 2}}' />两人出席</label>
+          <label><radio value="3" checked='{{attendInfo.peopleNum == 3}}' />三人出席</label>
+          <label><radio value="4" checked='{{attendInfo.peopleNum == 4}}' />三人以上</label>
+        </radio-group>
+      </view>
+      <view class='row row_two'>
+        <label class='tit tit_two'>备注</label>
+        <textarea disabled='{{!isFirst}}' name='remark' value='{{attendInfo.remark}}' placeholder='请填写您的备注信息'></textarea>
+      </view>
+      <view class='row btn'>
+        <button form-type="submit" class='left'>确认提交</button>
+        <!-- <view class='left'>确认提交</view> -->
+        <button class='right' bindtap='changePage'>取消</button>
+      </view>
+    </form>
+  </view>
+</view>

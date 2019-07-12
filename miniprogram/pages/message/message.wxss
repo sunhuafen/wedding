@@ -1,0 +1,237 @@
+/* pages/message/message.wxss */
+.mes .footer {
+  background: rgba(255,255,255,.8);
+  padding: 30rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mes .btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mes .btn button {
+  width:40%;
+  text-align:center;
+  font-size:32rpx;
+  color:#fff;
+  height:70rpx;
+  border-radius:35rpx;
+  line-height:70rpx;
+  border: none;
+}
+
+.mes .btn button.left {
+  background: #fdd202;
+}
+
+.mes .btn button.right {
+  background: #fdd202;
+}
+
+.mes .edit_mes {
+  padding-bottom: 30rpx;
+}
+
+.mes .edit_mes textarea {
+  width: 100%;
+  height: 250rpx;
+  line-height: 40rpx;
+}
+
+.mes .list {
+  left: 0;
+  right: 0;
+  padding: 0 30rpx;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding-bottom: 150rpx;
+}
+
+.mes .list_top {
+  padding-bottom: 410rpx;
+}
+
+.mes .list .item {
+  display: flex;
+  background: #fff;
+  min-height: 160rpx;
+  border-radius: 15rpx;
+  margin-top: 20rpx;
+  padding: 30rpx 35rpx;
+}
+
+.mes .list .item .one {
+  display: flex;
+  line-height:  50rpx;
+}
+
+.mes .list .item .one .name {
+  flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #474747;
+  font-size: 32rpx;
+}
+
+.mes .list .item .one .time {
+  width: 250rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.mes .list .item .two {
+  color: #666;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  word-break: break-all;
+}
+
+.mes .list .item .head {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.mes .list .item .cont {
+  flex: 1;
+  padding-left: 22rpx;
+}
+
+.attend {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0 30rpx;
+  overflow-y: auto;
+}
+
+
+.attend .title {
+  text-align: center;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  margin-top: 50rpx;
+}
+
+.attend_form {
+  margin: 0 20rpx;
+  font-size: 28rpx;
+  display: block;
+}
+
+.attend_form .row {
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.attend_form .row_two {
+  display: block;
+}
+
+.attend_form label.tit {
+  line-height: 48rpx;
+  margin-left: 10rpx;
+}
+
+.attend_form label.tit_two {
+  line-height: 80rpx;
+  display: block;
+  margin-left: 0;
+  border-bottom: 2rpx dashed #ccc;
+}
+
+.attend_form label.tit text {
+  color: red;
+  display: inline-block;
+  margin-left: 5rpx;
+}
+
+.attend_form input {
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 15rpx;
+  margin-left: 20rpx;
+}
+
+.attend_form radio-group label {
+  width: 50%;
+  display: inline-block;
+  margin-top: 30rpx;
+  padding-left: 50rpx;
+  color: #333;
+}
+
+.attend_form radio-group label radio {
+  margin-right: 5rpx;
+}
+
+.attend_form textarea {
+  width: 100%;
+  margin-top: 30rpx;
+  height: 220rpx;
+  line-height: 40rpx;
+}
+
+.attend_form .row.btn {
+  background: none;
+  padding: 0;
+}
+
+.mes .img_23 {
+  left: -20rpx;
+  top: -120rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.mes .img_9 {
+  right: -50rpx;
+  top: 360rpx;
+  animation: Img-Move-360 infinite 3s linear;
+  z-index: 100；
+}
+
+.mes .img_24 {
+  left: 220rpx;
+  top: -30rpx;
+  animation: Img-Move-15 infinite 3s linear;
+  z-index: 100；
+}
+
+.mes .img_18 {
+  left: 60rpx;
+  top: -130rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.mes .img_7 {
+  right: 280rpx;
+  top: -120rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.mes .img_17 {
+  right: 150rpx;
+  top: -120rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.mes .img_16 {
+  right: -80rpx;
+  top: -80rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.mes .img_20 {
+  right: 250rpx;
+  top: 120rpx;
+  transform: rotate(-90deg);
+}

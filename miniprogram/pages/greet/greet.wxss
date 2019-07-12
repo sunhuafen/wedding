@@ -1,0 +1,126 @@
+.greet .list {
+  left: 30rpx;
+  right: 30rpx;
+  top: 150rpx;
+  bottom: 250rpx;
+  border-radius: 10rpx;
+  background: rgba(255,255,255,.8);
+  box-shadow: 5rpx 5rpx 20rpx #ccc;
+  overflow-y: auto;
+  z-index: 2;
+  /* border: 2rpx solid #a0c023; */
+}
+
+.greet .list .item {
+  float: left;
+  width: 25%;
+  padding: 20rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.greet .list .item image {
+  width: 132rpx;
+  height: 132rpx;
+  border-radius: 50%;
+}
+
+.greet .list .item text {
+  width: 100%;
+  display: block;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.greet .footer {
+  bottom: 40rpx;
+  left: 30rpx;
+  right: 30rpx;
+}
+
+.greet .footer .num {
+  text-align: center;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 120rpx;
+}
+
+.greet .footer .btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.greet .footer .btn view {
+  width: 40%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+  height: 70rpx;
+  border-radius: 35rpx;
+  line-height: 70rpx;
+}
+
+.greet .footer .btn .one {
+  background: #fdd202;
+}
+
+.greet .footer .btn .two {
+  background: #fdd202;
+}
+
+.greet .img_23 {
+  left: -20rpx;
+  top: -120rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.greet .img_9 {
+  left: 100rpx;
+  top: 80rpx;
+  animation: Img-Move-360 infinite 3s linear;
+  z-index: 100；
+}
+
+.greet .img_24 {
+  left: 100rpx;
+  top: -20rpx;
+  animation: Img-Move-15 infinite 3s linear;
+  z-index: 100；
+}
+
+.greet .img_18 {
+  left: 200rpx;
+  top: -100rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.greet .img_7 {
+  right: 280rpx;
+  top: -80rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.greet .img_17 {
+  right: 150rpx;
+  top: -80rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.greet .img_16 {
+  right: -80rpx;
+  top: -80rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.greet .img_20 {
+  right: 250rpx;
+  top: 120rpx;
+  transform: rotate(-90deg);
+}

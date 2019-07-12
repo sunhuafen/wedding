@@ -1,0 +1,159 @@
+/* pages/nav/nav.wxss */
+
+#myMap {
+  width: 100%; 
+  height: 100%;
+  border: 2rpx solid #a0c023;
+}
+
+.map-box {
+  padding: 30rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 230rpx;
+  bottom: 240rpx;
+  z-index: 2;
+}
+
+.nav .phone {
+  position: fixed;
+  bottom: 160rpx;
+  font-size: 32rpx;
+  z-index: 3;
+  display: flex;
+  left: 0;
+  right: 0;
+  height: 70rpx;
+}
+
+.nav .phone view {
+  flex: 1;
+}
+
+.nav .phone view:first-child {
+  text-align: right;
+}
+
+.nav .phone view:last-child {
+  text-align: left;
+}
+
+.nav .phone view.tall {
+  flex: 3;
+  text-align: center
+}
+
+.nav .phone view.tall text {
+  display: inline-block;
+  height: 70rpx;
+  padding: 0 40rpx;
+  border-radius: 35rpx;
+  background: #fdd202;
+  line-height: 70rpx;
+  color: #fff;
+}
+
+.nav .img_23 {
+  top: -100rpx;
+  left: 0rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.nav .img_18 {
+  top: -150rpx;
+  left: 100rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.nav .img_7 {
+  top: -80rpx;
+  left: 300rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.nav .img_1 {
+  width: 450rpx;
+  height: 436rpx;
+  top: 0;
+  left: 50%;
+  margin-left: -225rpx;
+  z-index: 1;
+  animation: Img-Move-360 infinite 5s linear;
+}
+
+.nav .img_20 {
+  top: -110rpx;
+  left: 300rpx;
+}
+
+.nav .img_17 {
+  top: -100rpx;
+  right: 160rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.nav .img_16 {
+  top: -100rpx;
+  right: -30rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.nav .img_20 {
+  top: 158rpx;
+  left: -10rpx;
+}
+
+.nav .img_30 {
+  top: 140rpx;
+  left: 50%;
+  margin-left: -116rpx;
+}
+
+.nav .photo {
+  top: 35rpx;
+  left: 50%;
+  width: 330rpx;
+  height: 330rpx;
+  border-radius: 50%;
+  margin-left: -170rpx;
+  z-index: 2;
+}
+
+.nav .img_6 {
+  bottom: -200rpx;
+  left: 300rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.nav .img_9 {
+  bottom: -20rpx;
+  left: -35rpx;
+  animation: Img-Move-360 infinite 5s linear;
+}
+
+.nav .img_5 {
+  bottom: -65rpx;
+  right: 160rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.nav .img_13 {
+  width: 150rpx;
+  height: 146rpx;
+  bottom: -70rpx;
+  left: 180rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.nav .img_2 {
+  bottom: -65rpx;
+  left: 80rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.nav .img_12 {
+  bottom: -85rpx;
+  right: -40rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}

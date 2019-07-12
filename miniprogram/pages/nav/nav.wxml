@@ -1,0 +1,36 @@
+<view class='page nav'>
+  <image class='img_23 posi_fixed' src='../../images/icon/23.png'></image>
+  <image class='img_18 posi_fixed' src='../../images/icon/18.png'></image>
+  <image class='img_7 posi_fixed' src='../../images/icon/7.png'></image>
+  <image class='img_17 posi_fixed' src='../../images/icon/17.png'></image>
+  <image class='img_16 posi_fixed' src='../../images/icon/16.png'></image>
+  <image class='img_20 posi_fixed' src='../../images/icon/20.png'></image>
+  <image class='img_30 posi_fixed' src='../../images/icon/30.png'></image>
+  <view class="map-box">
+    <map
+      id="myMap"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      show-location
+      scale="17"
+      bindtap="toNav"
+    ></map>
+  </view>
+  <view class='posi_fixed phone'>
+    <view><image class='img_34' src='../../images/icon/34.png'></image></view>
+    <view class='tall'>
+      <text bindtap='makeTall' data-phone='{{manPhone}}'>呼叫新郎</text>
+    </view>
+    <view class='tall'>
+      <text bindtap='makeTall' data-phone='{{womenPhone}}'>呼叫新娘</text>
+    </view>
+    <view><image class='img_35' src='../../images/icon/35.png'></image></view>
+  </view>
+  <image class='img_6 posi_fixed' src='../../images/icon/6.png'></image>
+  <image class='img_9 posi_fixed' src='../../images/icon/9.png'></image>
+  <image class='img_13 posi_fixed' src='../../images/icon/13.png'></image>
+  <image class='img_5 posi_fixed' src='../../images/icon/5.png'></image>
+  <image class='img_2 posi_fixed' src='../../images/icon/2.png'></image>
+  <image class='img_12 posi_fixed' src='../../images/icon/12.png'></image>
+</view>

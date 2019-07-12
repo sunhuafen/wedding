@@ -1,0 +1,96 @@
+<!--pages/invite/invite.wxml-->
+
+<view class='page'>
+  <!-- 滑块 -->
+  <swiper class='swiper' indicator-dots="false" vertical='true' indicator-color='rgba(255,255,255,.3)' indicator-active-color='rgba(255,255,255,.9)' circular='true' autoplay="true" interval="5000" duration="1000">
+    <swiper-item class='item photo1'>
+      <view class='bag1 posi_fixed'></view>
+      <view class='text1 posi_fixed'>
+        Mis 孙
+      </view>
+      <image class='img_1 posi_fixed' src='../../images/icon/1.png'></image>
+      <image class='photo1 posi_fixed img_bor_shadow' src='{{imgSrc[0]}}'></image>
+      <image class='img_9 posi_fixed img_posi9' src='../../images/icon/9.png'></image>
+      <image class='img_6 posi_fixed img_posi6' src='../../images/icon/6.png'></image>
+      <image class='img_12 posi_fixed img_posi12' src='../../images/icon/12.png'></image>
+      <image class='img_13 posi_fixed img_posi13' src='../../images/icon/13.png'></image>
+      <image class='img_21 posi_fixed img_posi21' src='../../images/icon/21.png'></image>
+      <image class='img_2 posi_fixed img_posi2' src='../../images/icon/2.png'></image>
+      <image class='img_5 posi_fixed img_posi5' src='../../images/icon/5.png'></image>
+      <image class='img_3 posi_fixed img_posi3' src='../../images/icon/3.png'></image>
+      <image class='img_4 posi_fixed img_posi4' src='../../images/icon/4.png'></image>
+      <image class='img_25 posi_fixed img_posi25' src='../../images/icon/25.png'></image>
+      <image class='img_6 posi_fixed img_posi1' src='../../images/icon/6.png'></image>
+      <image class='img_8 posi_fixed img_posi8' src='../../images/icon/8.png'></image>
+      <image class='img_20 posi_fixed img_posi20' src='../../images/icon/20.png'></image>
+      <image class='img_31 posi_fixed img_posi31' src='../../images/icon/31.png'></image>
+    </swiper-item>
+    <swiper-item class='item photo1'>
+      <view class='bag1 posi_fixed'></view>
+      <view class='text1 posi_fixed'>
+        Mr 徐
+      </view>
+      <image class='img_1 posi_fixed' src='../../images/icon/1.png'></image>
+      <image class='photo1 posi_fixed img_bor_shadow' src='{{imgSrc[1]}}'></image>
+      <image class='img_9 posi_fixed img_posi9' src='../../images/icon/9.png'></image>
+      <image class='img_6 posi_fixed img_posi6' src='../../images/icon/6.png'></image>
+      <image class='img_12 posi_fixed img_posi12' src='../../images/icon/12.png'></image>
+      <image class='img_13 posi_fixed img_posi13' src='../../images/icon/13.png'></image>
+      <image class='img_21 posi_fixed img_posi21' src='../../images/icon/21.png'></image>
+      <image class='img_2 posi_fixed img_posi2' src='../../images/icon/2.png'></image>
+      <image class='img_5 posi_fixed img_posi5' src='../../images/icon/5.png'></image>
+      <image class='img_3 posi_fixed img_posi3' src='../../images/icon/3.png'></image>
+      <image class='img_4 posi_fixed img_posi4' src='../../images/icon/4.png'></image>
+      <image class='img_25 posi_fixed img_posi25' src='../../images/icon/25.png'></image>
+      <image class='img_6 posi_fixed img_posi1' src='../../images/icon/6.png'></image>
+      <image class='img_8 posi_fixed img_posi8' src='../../images/icon/8.png'></image>
+      <image class='img_20 posi_fixed img_posi20' src='../../images/icon/20.png'></image>
+      <image class='img_32 posi_fixed img_posi32' src='../../images/icon/32.png'></image>
+    </swiper-item>
+    <swiper-item class='item photo3'>
+      <image class='img_13 posi_fixed img_posi13' src='../../images/icon/13.png'></image>
+      <image class='img_2 posi_fixed img_posi2' src='../../images/icon/2.png'></image>
+      <image class='img_3 posi_fixed img_posi3' src='../../images/icon/3.png'></image>
+      <image class='img_4 posi_fixed img_posi4' src='../../images/icon/4.png'></image>
+      <image class='img_5 posi_fixed img_posi5' src='../../images/icon/5.png'></image>
+      <image class='img_6 posi_fixed img_posi6' src='../../images/icon/6.png'></image>
+      <image class='img_22 posi_fixed img_posi22' src='../../images/icon/22.png'></image>
+      <image class='img_9 posi_fixed img_posi9' src='../../images/icon/9.png'></image>
+      <image class='img_29 posi_fixed img_posi29' src='../../images/icon/29.png'></image>
+      <image class='img_33 posi_fixed img_posi33' src='../../images/icon/33.png'></image>
+      <view class='photo1 posi_fixed img_bor_shadow2'>
+        <image class='' mode='aspectFill' src='{{imgSrc[2]}}'></image>
+      </view>
+      <view class='photo2 posi_fixed img_bor_shadow2'>
+        <image class='' mode='aspectFill' src='{{imgSrc[3]}}'></image>
+      </view>
+      <view class='text posi_fixed'>
+        <p>8月26号</p>
+        <p>- 敬备喜酌 诚邀光临 -</p>
+      </view>
+    </swiper-item>
+    <swiper-item class='item photo4'>
+      <image class='img_11 posi_fixed' src='../../images/icon/11.png'></image>
+      <image class='img_36 posi_fixed' src='../../images/icon/36.png'></image>
+      <view class='posi_fixed photo1 posi_fixed img_bor_shadow2 photo'>
+        <image class='' mode='aspectFill' src='{{imgSrc[2]}}'></image>
+      </view>
+      <view class='posi_fixed photo2 posi_fixed img_bor_shadow2 photo'>
+        <image class='' mode='aspectFill' src='{{imgSrc[2]}}'></image>
+      </view>
+      <view class='posi_fixed photo3 posi_fixed img_bor_shadow2 photo'>
+        <image class='' mode='aspectFill' src='{{imgSrc[2]}}'></image>
+      </view>
+      <view class='posi_fixed photo4 posi_fixed img_bor_shadow2 photo'>
+        <image class='' mode='aspectFill' src='{{imgSrc[2]}}'></image>
+      </view>
+      <image class='img_12 posi_fixed' src='../../images/icon/12.png'></image>
+      <image class='img_4 posi_fixed' src='../../images/icon/4.png'></image>
+      <image class='img_5 posi_fixed' src='../../images/icon/5.png'></image>
+      <image class='img_6 posi_fixed' src='../../images/icon/6.png'></image>
+      <image class='img_22 posi_fixed' src='../../images/icon/22.png'></image>
+      <image class='img_9 posi_fixed' src='../../images/icon/9.png'></image>
+      <image class='img_20 posi_fixed' src='../../images/icon/20.png'></image>
+    </swiper-item>
+  </swiper>
+</view>
