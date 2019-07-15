@@ -104,7 +104,8 @@ page {
 }
 
 .invite .text4 {
-  top: 950rpx;
+  /* top: 950rpx; */
+  bottom: 110rpx;
 }
 
 .invite .img_posi11 {
