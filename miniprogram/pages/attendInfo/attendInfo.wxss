@@ -5,7 +5,7 @@
   display: block;
 }
 
-.mes .list .item .one view {
+.mes .list .item .cont view {
  font-size: 28rpx;
  line-height: 60rpx;
  color: #666;

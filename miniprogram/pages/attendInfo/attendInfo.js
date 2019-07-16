@@ -5,7 +5,7 @@ Page({
     attendList: []
   },
 
-  // 
+  // 获取列表
   getAttendList: function() {
     let cloud = wx.cloud.database();
     let that = this;

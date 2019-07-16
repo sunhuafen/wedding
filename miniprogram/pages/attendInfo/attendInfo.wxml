@@ -13,13 +13,11 @@
     <view class='item' wx:for='{{attendList}}' wx:key='{{item._id}}'>
       <image class='head' src='{{item.avatarUrl}}'></image>
       <view class='cont'>
-        <view class='one'>
-          <view>姓名：{{item.name}}</view>
-          <view>微信昵称：{{item.nickName}}</view>
-          <view>手机号：{{item.phone}}</view>
-          <view>参加人数：{{item.peopleNum}}</view>
-        </view>
-        <view class='two'>备注：{{item.remark}}</view>
+        <view>姓名：{{item.name}}</view>
+        <view>微信昵称：{{item.nickName}}</view>
+        <view>手机号：{{item.phone}}</view>
+        <view>参加人数：{{item.peopleNum}}</view>
+        <view>备注：{{item.remark}}</view>
       </view>
     </view>
   </view>
