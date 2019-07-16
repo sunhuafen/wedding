@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/message/message",
     "pages/invite/invite",
     "pages/attendInfo/attendInfo",
-    "pages/message/message",
     "pages/greet/greet",
     "pages/photo/photo",
     "pages/nav/nav"

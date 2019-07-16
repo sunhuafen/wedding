@@ -42,34 +42,37 @@
       <view class='row'>
         <image class='img_37' src='../../images/icon/37.png'></image>
         <label class='tit'>姓名<text>*</text></label>
-        <input type='text' disabled='{{!isFirst}}' name='name' value='{{attendInfo.name}}' bindinput='inputEdit' placeholder='怎么称呼您？'></input>
+        <input type='text' disabled='{{isDisabled}}' name='name' value='{{attendInfo.name}}' placeholder='怎么称呼您？'></input>
       </view>
       <view class='row'>
         <image class='img_38' src='../../images/icon/38.png'></image>
         <label class='tit'>电话<text>*</text></label>
-        <input type='text' disabled='{{!isFirst}}' name='phone' value='{{attendInfo.phone}}' placeholder='请填写有效的手机号'></input>
+        <input type='text' disabled='{{isDisabled}}' name='phone' value='{{attendInfo.phone}}' placeholder='请填写有效的手机号'></input>
       </view>
       <view class='row row_two'>
         <label class='tit tit_two'>几人出席</label>
         <radio-group name='peopleNum'>
           <label wx:for='{{attendNumList}}' wx:key='{{item.value}}'>
-            <radio value='{{item.value}}' checked='{{attendInfo.peopleNum == item.value}}'  disabled='{{!isFirst}}' />{{item.name}}
+            <radio value='{{item.value}}' checked='{{attendInfo.peopleNum == item.value}}'  disabled='{{isDisabled}}' />{{item.name}}
           </label>
         </radio-group>
       </view>
       <view class='row row_two'>
         <label class='tit tit_two'>备注</label>
-        <textarea disabled='{{!isFirst}}' name='remark' value='{{attendInfo.remark}}' placeholder='请填写您的备注信息'></textarea>
+        <textarea disabled='{{isDisabled}}' name='remark' value='{{attendInfo.remark}}' placeholder='请填写您的备注信息'></textarea>
       </view>
       <view class='row btn' wx:if='{{isFirst}}'>
-        <button form-type="submit" data-type='{{attendIsEdit}}' class='left'>确认提交</button>
-        <button class='right' bindtap='changePage'>取消</button>
-      </view> 
-      <view class='row btn' wx:else>
+        <button form-type="submit" data-type='false' class='left'>确认提交</button>
+        <button class='right' bindtap='changePage'>返回</button>
+      </view>
+      <view class='row btn' wx:elif='{{!isFirst && !attendIsEdit}}'>
         <button class='left' bindtap='isFirstChange'>重新编辑</button>
         <button class='right' bindtap='changePage'>返回</button>
       </view>
-
+      <view class='row btn' wx:elif='{{!isFirst && attendIsEdit}}'>
+        <button form-type="submit" data-type='true' class='left'>提交编辑</button>
+        <button class='right' bindtap='isEditCancle'>取消</button>
+      </view>
       <view class='row row_a' wx-if='{{isMainPeople}}'>
         <navigator url="../attendInfo/attendInfo">出席信息</navigator>
       </view>

@@ -23,6 +23,7 @@ Page({
     ],
     attendIsEdit: false,
     isMainPeople: false,
+    isDisabled: true
   },
 
   // 获取留言列表
@@ -131,11 +132,13 @@ Page({
           let info = res.data[0];
           that.setData({
             isFirst: false,
+            isDisabled: true,
             attendInfo: info
           })
         } else {
           that.setData({
-            isFirst: true
+            isFirst: true,
+            isDisabled: false,
           })
         }
       },
@@ -161,11 +164,9 @@ Page({
 
   // 出席信息提交
   attendSubmit: function (e) {
-
     let info = e.detail.value;
     let isEdit = e.detail.target.dataset.type;
     console.log(isEdit);
-    console.log(e);
 
     if (info.name === '') {
       wx.showToast({ icon: 'none', title: '请输入姓名~' });
@@ -181,8 +182,9 @@ Page({
         cloud.collection('attendList').doc(attendId).update({
           data: info,
           success: function (res) {
-            wx.showToast({ icon: 'none', title: '保存成功，谢谢~' });
+            wx.showToast({ icon: 'none', title: '编辑成功，谢谢~' });
             that.changePage();
+            that.setData({ attendIsEdit: false})
           },
           fail: err => {
             wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
@@ -206,9 +208,15 @@ Page({
   // 开启出席信息编辑
   isFirstChange: function () {
     this.setData({
-      isFirst: !this.data.isFirst,
-      attendIsEdit: true
+      isDisabled: !this.data.isDisabled,
+      attendIsEdit: !this.data.attendIsEdit
     })
+  },
+
+  // 取消编辑
+  isEditCancle: function () {
+    this.isFirstChange();
+    this.getIsExist();
   },
 
   onLoad: function () {
