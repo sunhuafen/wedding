@@ -23,7 +23,26 @@ Page({
     ],
     attendIsEdit: false,
     isMainPeople: false,
-    isDisabled: true
+    isDisabled: true,
+    isSwitch: false
+  },
+
+  touchStart: function (e) {
+    this.setData({ isSwitch: true })
+  },
+
+  touchEnd: function (e) {
+    let that = this;
+    let timeOut = setTimeout(outEvent, 3000);
+    function outEvent() {
+      that.setData({ isSwitch: false })
+    }
+  },
+
+  prevPage: function () {
+    wx.switchTab({
+      url: '../greet/greet',
+    })
   },
 
   // 获取留言列表

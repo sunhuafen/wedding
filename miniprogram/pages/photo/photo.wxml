@@ -1,6 +1,12 @@
 <!--pages/invite/invite.wxml-->
 
-<view class='page'>
+<view class='page' bindtouchstart='touchStart' bindtouchend='touchEnd'>
+  <view class='posi_fixed page_switch next_page' wx:if='{{isSwitch}}' bindtap='nextPage'>
+    <image  class='img_39' src='../../images/icon/39.png'></image>
+  </view>
+  <view class='posi_fixed page_switch prev_page' wx:if='{{isSwitch}}' bindtap='prevPage'>
+    <image  class='img_40' src='../../images/icon/40.png'></image>
+  </view>
   <!-- 滑块 -->
   <swiper class='swiper' indicator-dots="false" vertical='true' indicator-color='rgba(255,255,255,.3)' indicator-active-color='rgba(255,255,255,.9)' circular='true' autoplay="true" interval="5000" duration="1000">
     <swiper-item class='item photo1'>

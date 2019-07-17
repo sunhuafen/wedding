@@ -12,7 +12,32 @@ Page({
     }],
     manPhone: '17611485861',
     womenPhone: '18301310861',
-    mapHei: 300
+    mapHei: 300,
+    isSwitch: false
+  },
+
+  touchStart: function (e) {
+    this.setData({ isSwitch: true })
+  },
+
+  touchEnd: function (e) {
+    let that = this;
+    let timeOut = setTimeout(outEvent, 3000);
+    function outEvent() {
+      that.setData({ isSwitch: false })
+    }
+  },
+
+  nextPage: function () {
+    wx.switchTab({
+      url: '../greet/greet',
+    })
+  },
+
+  prevPage: function () {
+    wx.switchTab({
+      url: '../photo/photo',
+    })
   },
   
   onReady: function (e) {

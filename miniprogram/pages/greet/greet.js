@@ -5,7 +5,32 @@ Page({
     greetList: [],
     greetNum: 0,
     openId: null,
-    userInfo: null
+    userInfo: null,
+    isSwitch: false
+  },
+
+  touchStart: function (e) {
+    this.setData({ isSwitch: true })
+  },
+
+  touchEnd: function (e) {
+    let that = this;
+    let timeOut = setTimeout(outEvent, 3000);
+    function outEvent() {
+      that.setData({ isSwitch: false })
+    }
+  },
+
+  nextPage: function () {
+    wx.switchTab({
+      url: '../message/message',
+    })
+  },
+
+  prevPage: function () {
+    wx.switchTab({
+      url: '../nav/nav',
+    })
   },
 
   // 送上祝福按钮

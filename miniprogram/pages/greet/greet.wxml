@@ -1,4 +1,10 @@
-<view class='page greet'>
+<view class='page greet' bindtouchstart='touchStart' bindtouchend='touchEnd'>
+  <view class='posi_fixed page_switch next_page' wx:if='{{isSwitch}}' bindtap='nextPage'>
+    <image  class='img_39' src='../../images/icon/39.png'></image>
+  </view>
+  <view class='posi_fixed page_switch prev_page' wx:if='{{isSwitch}}' bindtap='prevPage'>
+    <image  class='img_40' src='../../images/icon/40.png'></image>
+  </view>
   <image class='img_23 posi_fixed' src='../../images/icon/23.png'></image>
   <image class='img_18 posi_fixed' src='../../images/icon/18.png'></image>
   <image class='img_7 posi_fixed' src='../../images/icon/7.png'></image>

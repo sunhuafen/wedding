@@ -1,5 +1,8 @@
 <!--pages/invite/invite.wxml-->
-<view class="page invite">
+<view class="page invite" bindtouchstart='touchStart' bindtouchend='touchEnd'>
+  <view class='posi_fixed page_switch next_page' wx:if='{{isSwitch}}' bindtap='nextPage'>
+    <image  class='img_39' src='../../images/icon/39.png'></image>
+  </view>
   <image class='img_13 posi_fixed img_posi1' src='../../images/icon/13.png'></image>
   <image class='img_2 posi_fixed img_posi2' src='../../images/icon/2.png'></image>
   <image class='img_3 posi_fixed img_posi3' src='../../images/icon/3.png'></image>
@@ -27,4 +30,5 @@
   <image class='img_5 posi_fixed img_posi17' src='../../images/icon/5.png'></image>
   <image class='img_16 posi_fixed img_posi18' src='../../images/icon/16.png'></image>
   <image class='img_17 posi_fixed img_posi19' src='../../images/icon/17.png'></image>
+  <image class='img_26 posi_fixed' src='../../images/icon/26.png'></image>
 </view>
