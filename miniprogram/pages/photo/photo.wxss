@@ -51,6 +51,7 @@ page, .page, .swiper, .swiper .item {
   line-height: 500rpx;
   font-size: 46rpx;
   padding: 70rpx 50rpx 0 150rpx;
+  color: #3e6123;
 }
 
 .photo1 .text1.text2 {
@@ -63,7 +64,7 @@ page, .page, .swiper, .swiper .item {
   left: -50rpx;
 }
 
-.photo1 .bag1 {
+.photo1 .bag1, .photo2 .bag1, .photo3 .bag1, .photo4 .bag1, .photo5 .bag1 {
   width: 1000rpx;
   height: 1000rpx;
   background: #f1f8bd;
@@ -93,13 +94,13 @@ page, .page, .swiper, .swiper .item {
 }
 
 .photo1 .img_posi31 {
-  bottom: 330rpx;
-  right: 100rpx;
+  bottom: 290rpx;
+  right: 80rpx;
 }
 
 .photo1 .img_posi32 {
-  bottom: 330rpx;
-  right: 100rpx;
+  bottom: 290rpx;
+  right: 80rpx;
 }
 
 .photo1 .img_posi3 {
@@ -267,9 +268,11 @@ page, .page, .swiper, .swiper .item {
 .photo4 .photo1 {
   width: 43%;
   left: 6%;
-  height: 37%;
-  top: 15%;
+  bottom: 50%;
   z-index: 2;
+  height: 322.5rpx;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .photo4 .photo2 {
@@ -286,7 +289,7 @@ page, .page, .swiper, .swiper .item {
 }
 
 .photo4 .img_36 {
-  top: 30rpx;
+  top: 100rpx;
   left: 6%;
 }
 
@@ -353,3 +356,114 @@ page, .page, .swiper, .swiper .item {
   right: 230rpx;
   transform: rotate(-90deg);
 }
+
+.photo5 .photo1 {
+  width: 688rpx;
+  height: 602rpx;
+  top: 50%;
+  left: 50%;
+  margin-left: -344rpx;
+  margin-top: -301rpx;
+}
+
+.photo5 .img_23 {
+  top: -100rpx;
+  left: 0rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo5 .img_18 {
+  top: -150rpx;
+  left: 100rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo5 .img_7 {
+  top: -80rpx;
+  left: 300rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo5 .img_1 {
+  width: 450rpx;
+  height: 436rpx;
+  top: 0;
+  left: 50%;
+  margin-left: -225rpx;
+  z-index: 1;
+  animation: Img-Move-360 infinite 5s linear;
+}
+
+.photo5 .img_20 {
+  top: -110rpx;
+  left: 300rpx;
+}
+
+.photo5 .img_17 {
+  top: -100rpx;
+  right: 160rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo5 .img_16 {
+  top: -100rpx;
+  right: -30rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo5 .img_20 {
+  top: 158rpx;
+  left: -10rpx;
+}
+
+.photo5 .img_6 {
+  bottom: -40rpx;
+  left: -10rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo5 .img_9 {
+  bottom: -20rpx;
+  right: 225rpx;
+  animation: Img-Move-360 infinite 5s linear;
+}
+
+.photo5 .img_5 {
+  bottom: -30rpx;
+  right: 170rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo5 .img_13 {
+  width: 150rpx;
+  height: 146rpx;
+  bottom: -20rpx;
+  left: 150rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo5 .img_2 {
+  bottom: -30rpx;
+  left: 290rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo5 .img_12 {
+  bottom:-40rpx;
+  right:-20rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo5 .img_43 {
+  right: 50rpx;
+  bottom: 300rpx;
+}
+
+.photo5 .img_44 {
+  right: 20rpx;
+  bottom: 200rpx;
+}
+
+/* swiper-item.photo3, swiper-item.photo4, swiper-item.photo5 {
+  background: #f1f8bd;
+} */

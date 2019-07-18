@@ -12,7 +12,7 @@
     <swiper-item class='item photo1'>
       <view class='bag1 posi_fixed'></view>
       <view class='text1 posi_fixed'>
-        Mis 孙
+        <!-- Mis 孙 -->
       </view>
       <image class='img_1 posi_fixed' src='../../images/icon/1.png'></image>
       <image class='photo1 posi_fixed img_bor_shadow' src='{{imgSrc[0]}}'></image>
@@ -34,7 +34,7 @@
     <swiper-item class='item photo1'>
       <view class='bag1 posi_fixed'></view>
       <view class='text1 posi_fixed'>
-        Mr 徐
+        <!-- Mr 徐 -->
       </view>
       <image class='img_1 posi_fixed' src='../../images/icon/1.png'></image>
       <image class='photo1 posi_fixed img_bor_shadow' src='{{imgSrc[1]}}'></image>
@@ -54,6 +54,7 @@
       <image class='img_32 posi_fixed img_posi32' src='../../images/icon/32.png'></image>
     </swiper-item>
     <swiper-item class='item photo3'>
+      <view class='bag1 posi_fixed'></view>
       <image class='img_13 posi_fixed img_posi13' src='../../images/icon/13.png'></image>
       <image class='img_2 posi_fixed img_posi2' src='../../images/icon/2.png'></image>
       <image class='img_3 posi_fixed img_posi3' src='../../images/icon/3.png'></image>
@@ -76,18 +77,19 @@
       </view>
     </swiper-item>
     <swiper-item class='item photo4'>
+      <view class='bag1 posi_fixed'></view>
       <image class='img_11 posi_fixed' src='../../images/icon/11.png'></image>
       <image class='img_36 posi_fixed' src='../../images/icon/36.png'></image>
-      <view class='posi_fixed photo1 posi_fixed img_bor_shadow2 photo'>
+      <view class='posi_fixed photo1 img_bor_shadow2 photo'>
         <image class='' mode='aspectFill' src='{{imgSrc[2]}}'></image>
       </view>
-      <view class='posi_fixed photo2 posi_fixed img_bor_shadow2 photo'>
+      <view class='posi_fixed photo2 img_bor_shadow2 photo'>
         <image class='' mode='aspectFill' src='{{imgSrc[2]}}'></image>
       </view>
-      <view class='posi_fixed photo3 posi_fixed img_bor_shadow2 photo'>
+      <view class='posi_fixed photo3 img_bor_shadow2 photo'>
         <image class='' mode='aspectFill' src='{{imgSrc[2]}}'></image>
       </view>
-      <view class='posi_fixed photo4 posi_fixed img_bor_shadow2 photo'>
+      <view class='posi_fixed photo4 img_bor_shadow2 photo'>
         <image class='' mode='aspectFill' src='{{imgSrc[2]}}'></image>
       </view>
       <image class='img_12 posi_fixed' src='../../images/icon/12.png'></image>
@@ -97,6 +99,24 @@
       <image class='img_22 posi_fixed' src='../../images/icon/22.png'></image>
       <image class='img_9 posi_fixed' src='../../images/icon/9.png'></image>
       <image class='img_20 posi_fixed' src='../../images/icon/20.png'></image>
+    </swiper-item>
+    <swiper-item class='item photo5'>
+      <view class='bag1 posi_fixed'></view>
+      <!-- <image class='img_23 posi_fixed' src='../../images/icon/23.png'></image>
+      <image class='img_18 posi_fixed' src='../../images/icon/18.png'></image>
+      <image class='img_7 posi_fixed' src='../../images/icon/7.png'></image>
+      <image class='img_17 posi_fixed' src='../../images/icon/17.png'></image>
+      <image class='img_16 posi_fixed' src='../../images/icon/16.png'></image>
+      <image class='img_20 posi_fixed' src='../../images/icon/20.png'></image> -->
+      <image class='img_43 posi_fixed' src='../../images/icon/43.png'></image>
+      <!-- <image class='img_44 posi_fixed' src='../../images/icon/44.png'></image> -->
+      <image class='img_6 posi_fixed' src='../../images/icon/6.png'></image>
+      <image class='img_9 posi_fixed' src='../../images/icon/9.png'></image>
+      <image class='img_13 posi_fixed' src='../../images/icon/13.png'></image>
+      <image class='img_5 posi_fixed' src='../../images/icon/5.png'></image>
+      <image class='img_2 posi_fixed' src='../../images/icon/2.png'></image>
+      <image class='img_12 posi_fixed' src='../../images/icon/12.png'></image>
+      <image class='photo1 posi_fixed' src='{{imgSrc[4]}}'></image>
     </swiper-item>
   </swiper>
 </view>

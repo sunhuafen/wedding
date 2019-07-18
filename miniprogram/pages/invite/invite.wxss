@@ -109,12 +109,18 @@
 }
 
 .invite .img_posi11 {
+  width: 124rpx;
+  height: 58rpx;
+  overflow: hidden;
   top: 680rpx;
   left: 50%;
   margin-left: -62rpx;
 }
 
 .invite .img_posi12 {
+  width: 124rpx;
+  height: 53rpx;
+  overflow: hidden;
   top: 810rpx;
   left: 50%;
   margin-left: -62rpx;

@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/invite/invite",
+    "pages/photo/photo",
     "pages/message/message",
     "pages/attendInfo/attendInfo",
     "pages/greet/greet",
-    "pages/photo/photo",
     "pages/nav/nav"
   ],
   "window": {

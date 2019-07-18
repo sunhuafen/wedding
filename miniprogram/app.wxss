@@ -204,6 +204,16 @@ input[disabled], textarea[disabled] {
   height: 48rpx;
 }
 
+.page .img_43 {
+  width: 100rpx;
+  height: 107rpx;
+}
+
+/* .page .img_44 {
+  width: 161rpx;
+  height: 155rpx;
+} */
+
 .page .img_bor_shadow {
   border: 25rpx solid #fff;
   box-shadow: 5rpx 5rpx 30rpx #ccc;
