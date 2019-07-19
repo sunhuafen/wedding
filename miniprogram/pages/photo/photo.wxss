@@ -208,8 +208,8 @@ page, .page, .swiper, .swiper .item {
 }
 
 .photo3 .img_posi29 {
-  left: 200rpx;
-  bottom: 180rpx;
+  left: 150rpx;
+  bottom: 150rpx;
   z-index: 3;
 }
 
@@ -363,24 +363,24 @@ page, .page, .swiper, .swiper .item {
   top: 50%;
   left: 50%;
   margin-left: -344rpx;
-  margin-top: -301rpx;
+  margin-top: -250rpx;
 }
 
 .photo5 .img_23 {
-  top: -100rpx;
-  left: 0rpx;
+  top: -150rpx;
+  left: 150rpx;
   animation: Img-Move-15 infinite 3s linear;
 }
 
 .photo5 .img_18 {
-  top: -150rpx;
-  left: 100rpx;
+  top: -130rpx;
+  left: 0rpx;
   animation: Img-Move-15 infinite 3s linear;
 }
 
 .photo5 .img_7 {
-  top: -80rpx;
-  left: 300rpx;
+  top: -100rpx;
+  left: 280rpx;
   animation: Img-Move-15 infinite 3s linear;
 }
 
@@ -394,26 +394,22 @@ page, .page, .swiper, .swiper .item {
   animation: Img-Move-360 infinite 5s linear;
 }
 
-.photo5 .img_20 {
-  top: -110rpx;
-  left: 300rpx;
-}
-
 .photo5 .img_17 {
-  top: -100rpx;
-  right: 160rpx;
+  top: -120rpx;
+  right: 190rpx;
   animation: Img-Move-15 infinite 3s linear;
+  z-index: 1;
 }
 
 .photo5 .img_16 {
-  top: -100rpx;
+  top: -200rpx;
   right: -30rpx;
   animation: Img-Move-15 infinite 3s linear;
 }
 
 .photo5 .img_20 {
-  top: 158rpx;
-  left: -10rpx;
+  top: 80rpx;
+  left: -50rpx;
 }
 
 .photo5 .img_6 {
@@ -456,7 +452,7 @@ page, .page, .swiper, .swiper .item {
 
 .photo5 .img_43 {
   right: 50rpx;
-  bottom: 300rpx;
+  bottom: 270rpx;
 }
 
 .photo5 .img_44 {
@@ -464,6 +460,8 @@ page, .page, .swiper, .swiper .item {
   bottom: 200rpx;
 }
 
-/* swiper-item.photo3, swiper-item.photo4, swiper-item.photo5 {
-  background: #f1f8bd;
-} */
+.photo5 .img_47 {
+  left: 50%;
+  margin-left: -112rpx;
+  top: 120rpx;
+}

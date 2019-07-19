@@ -6,7 +6,7 @@ page {
   height: 100%;
 }
 
-view, image, p, label, input, textarea, button {
+view, image, p, label, input, textarea, button, scroll-view {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -213,6 +213,26 @@ input[disabled], textarea[disabled] {
   width: 161rpx;
   height: 155rpx;
 } */
+
+.page .img_47 {
+  width: 224rpx;
+  height: 159rpx;
+}
+
+.page .img_48 {
+  width: 294rpx;
+  height: 90rpx;
+}
+
+.page .img_49 {
+  width: 78rpx;
+  height: 78rpx;
+}
+
+.page .img_50 {
+  width: 28rpx;
+  height: 36rpx;
+}
 
 .page .img_bor_shadow {
   border: 25rpx solid #fff;

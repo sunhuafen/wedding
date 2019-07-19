@@ -9,6 +9,7 @@
   overflow-y: auto;
   z-index: 2;
   /* border: 2rpx solid #a0c023; */
+  -webkit-overflow-scrolling: touch;
 }
 
 .greet .list .item {
@@ -57,7 +58,7 @@
   justify-content: space-between;
 }
 
-.greet .footer .btn view {
+.greet .footer .btn button {
   width: 40%;
   text-align: center;
   font-size: 32rpx;

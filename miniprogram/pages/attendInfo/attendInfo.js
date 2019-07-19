@@ -11,6 +11,7 @@ Page({
     let that = this;
     cloud.collection('attendList').where({}).get({
       success: res => {
+        console.log(res);
         that.setData({
           attendList: res.data
         })

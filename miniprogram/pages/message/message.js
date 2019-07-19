@@ -3,7 +3,7 @@ Page({
 
   data: {
     mesList: [],
-    isEdit: false,
+    mesIsOpen: false,
     mesCont: '',
     userInfo: null,
     isMainPage: true,
@@ -21,7 +21,6 @@ Page({
       { name: '三人出席', value: 3 },
       { name: '三人以上', value: 4 }
     ],
-    attendIsEdit: false,
     isMainPeople: false,
     isDisabled: true,
     isSwitch: false
@@ -65,49 +64,45 @@ Page({
   addMes: function() {
     let utilJs = require('../../util.js');
     let that = this;
-    let userInfo = that.data.userInfo;
     let cloud = wx.cloud.database();
     let time = utilJs.formatTime (new Date());
-    cloud.collection('mesList').add({
-      data: {
-        avatarUrl: userInfo.avatarUrl,
-        nickName: userInfo.nickName,
-        mesCont: this.data.mesCont,
-        time: time
-      },
-      success: function (res) {
-        wx.showToast({ icon: 'none', title: '留言发送成功，谢谢~' });
-
-        // 获取祝福列表
-        that.getMesList();
-        that.setData({
-          mesCont: '',
-          isEdit: !that.data.isEdit
-        })
-      },
-      fail: err => {
-        wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
-      }
-    })
+    let userInfo = that.data.userInfo;
+    if (that.data.mesCont) {
+      cloud.collection('mesList').add({
+        data: {
+          avatarUrl: userInfo.avatarUrl,
+          nickName: userInfo.nickName,
+          mesCont: that.data.mesCont,
+          time: time
+        },
+        success: function (res) {
+          wx.showToast({ icon: 'none', title: '留言发送成功，谢谢~' });
+          // 获取祝福列表
+          that.getMesList();
+          that.setData({
+            mesCont: '',
+            mesIsOpen: !that.data.mesIsOpen
+          })
+        },
+        fail: err => {
+          wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
+        }
+      })
+    }else {
+      wx.showToast({ icon: 'none', title: '写点啥吧~~' });
+    }
   },
 
   // 打开
   openEdit: function (e) {
     const that = this
-    if (e.target.errMsg === 'getUserInfo:ok') {
-      wx.getUserInfo({
-        success: function (res) {
-          that.setData({
-            userInfo: res.userInfo,
-            isEdit: !that.data.isEdit
-          })
-        }
-      })
-    }
-
-    that.setData({
-      // userInfo: res.userInfo,
-      isEdit: !that.data.isEdit
+    wx.getUserInfo({
+      success: function (res) {
+        that.setData({
+          userInfo: res.userInfo,
+          mesIsOpen: !that.data.mesIsOpen
+        })
+      }
     })
   },
 
@@ -136,6 +131,14 @@ Page({
       })
       that.getIsExist();
       that.changePage();
+    })
+    
+    wx.getUserInfo({
+      success: function (res) {
+        that.setData({
+          userInfo: res.userInfo
+        })
+      }
     })
   },
 
@@ -170,7 +173,7 @@ Page({
   // 取消编辑
   closeEdit: function() {
     this.setData({
-      isEdit: !this.data.isEdit
+      mesIsOpen: !this.data.mesIsOpen
     })
   },
 
@@ -184,8 +187,7 @@ Page({
   // 出席信息提交
   attendSubmit: function (e) {
     let info = e.detail.value;
-    let isEdit = e.detail.target.dataset.type;
-    console.log(isEdit);
+    let that = this;
 
     if (info.name === '') {
       wx.showToast({ icon: 'none', title: '请输入姓名~' });
@@ -193,23 +195,12 @@ Page({
       wx.showToast({ icon: 'none', title: '请输入电话~' });
     } else {
       let cloud = wx.cloud.database();
-      let that = this;
+      console.log(that.data.userInfo)
       let attendId = that.data.attendInfo._id;
-      info.nickName = 'Zz';
+      info.nickName = that.data.userInfo.nickName;
+      info.avatarUrl = that.data.userInfo.avatarUrl;
 
-      if (isEdit) { // 编辑
-        cloud.collection('attendList').doc(attendId).update({
-          data: info,
-          success: function (res) {
-            wx.showToast({ icon: 'none', title: '编辑成功，谢谢~' });
-            that.changePage();
-            that.setData({ attendIsEdit: false})
-          },
-          fail: err => {
-            wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
-          }
-        })
-      } else { // 新增
+      if (that.data.isFirst) { // 新增
         cloud.collection('attendList').add({
           data: info,
           success: function (res) {
@@ -220,21 +211,32 @@ Page({
             wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
           }
         })
+      } else { // 编辑
+        cloud.collection('attendList').doc(attendId).update({
+          data: info,
+          success: function (res) {
+            wx.showToast({ icon: 'none', title: '编辑成功，谢谢~' });
+            that.changePage();
+            that.isAttendEdit();
+          },
+          fail: err => {
+            wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
+          }
+        })
       }
     }
   },
 
   // 开启出席信息编辑
-  isFirstChange: function () {
+  isAttendEdit: function () {
     this.setData({
-      isDisabled: !this.data.isDisabled,
-      attendIsEdit: !this.data.attendIsEdit
+      isDisabled: !this.data.isDisabled
     })
   },
 
-  // 取消编辑
-  isEditCancle: function () {
-    this.isFirstChange();
+  // 关闭出席信息编辑
+  closeAttendEdit: function() {
+    this.isAttendEdit();
     this.getIsExist();
   },
 

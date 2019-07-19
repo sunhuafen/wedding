@@ -63,7 +63,7 @@
       <image class='img_6 posi_fixed img_posi6' src='../../images/icon/6.png'></image>
       <image class='img_22 posi_fixed img_posi22' src='../../images/icon/22.png'></image>
       <image class='img_9 posi_fixed img_posi9' src='../../images/icon/9.png'></image>
-      <image class='img_29 posi_fixed img_posi29' src='../../images/icon/29.png'></image>
+      <image class='img_48 posi_fixed img_posi29' src='../../images/icon/48.png'></image>
       <image class='img_33 posi_fixed img_posi33' src='../../images/icon/33.png'></image>
       <view class='photo1 posi_fixed img_bor_shadow2'>
         <image class='' mode='aspectFill' src='{{imgSrc[2]}}'></image>
@@ -102,14 +102,13 @@
     </swiper-item>
     <swiper-item class='item photo5'>
       <view class='bag1 posi_fixed'></view>
-      <!-- <image class='img_23 posi_fixed' src='../../images/icon/23.png'></image>
+      <image class='img_23 posi_fixed' src='../../images/icon/23.png'></image>
       <image class='img_18 posi_fixed' src='../../images/icon/18.png'></image>
       <image class='img_7 posi_fixed' src='../../images/icon/7.png'></image>
       <image class='img_17 posi_fixed' src='../../images/icon/17.png'></image>
       <image class='img_16 posi_fixed' src='../../images/icon/16.png'></image>
-      <image class='img_20 posi_fixed' src='../../images/icon/20.png'></image> -->
       <image class='img_43 posi_fixed' src='../../images/icon/43.png'></image>
-      <!-- <image class='img_44 posi_fixed' src='../../images/icon/44.png'></image> -->
+      <image class='img_47 posi_fixed' src='../../images/icon/47.png'></image>
       <image class='img_6 posi_fixed' src='../../images/icon/6.png'></image>
       <image class='img_9 posi_fixed' src='../../images/icon/9.png'></image>
       <image class='img_13 posi_fixed' src='../../images/icon/13.png'></image>

@@ -10,7 +10,6 @@
   <image class='img_7 posi_fixed' src='../../images/icon/7.png'></image>
   <image class='img_17 posi_fixed' src='../../images/icon/17.png'></image>
   <image class='img_16 posi_fixed' src='../../images/icon/16.png'></image>
-  <!-- <image class='img_20 posi_fixed' src='../../images/icon/20.png'></image> -->
   <image class='img_9 posi_fixed' src='../../images/icon/9.png'></image>
   <image class='img_24 posi_fixed' src='../../images/icon/24.png'></image>
   <view class='list posi_fixed'>
@@ -22,8 +21,8 @@
   <view class='footer posi_fixed'>
     <view class='num'>已收到{{greetNum}}位好友送来的祝福</view>
     <view class='btn'>
-      <view class='one' open-type='getUserInfo' bindtap='sendGreet'>送上祝福</view>
-      <view class='two' open-type='share'>分享喜悦</view>
+      <button class='one' open-type='getUserInfo' bindtap='sendGreet'>送上祝福</button>
+      <button class='two' open-type='share'>分享喜悦</button>
     </view>
   </view>
 </view>

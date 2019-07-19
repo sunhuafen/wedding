@@ -3,6 +3,10 @@
   <view class='posi_fixed page_switch next_page' wx:if='{{isSwitch}}' bindtap='nextPage'>
     <image  class='img_39' src='../../images/icon/39.png'></image>
   </view>
+  <view class="music posi_fixed {{isPlay? 'music_play':''}}" bindtap='audioPlay'>
+    <image class='img_49' src='../../images/icon/49.png'></image>
+    <!-- <image class='img_50' src='../../images/icon/50.png'></image> -->
+  </view>
   <image class='img_13 posi_fixed img_posi1' src='../../images/icon/13.png'></image>
   <image class='img_2 posi_fixed img_posi2' src='../../images/icon/2.png'></image>
   <image class='img_3 posi_fixed img_posi3' src='../../images/icon/3.png'></image>

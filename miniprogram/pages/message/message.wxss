@@ -49,10 +49,11 @@
   bottom: 0;
   overflow-y: auto;
   padding-bottom: 150rpx;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mes .list_top {
-  padding-bottom: 410rpx;
+  padding-bottom: 420rpx;
 }
 
 .mes .list .item {

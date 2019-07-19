@@ -36,16 +36,14 @@ Page({
   // 送上祝福按钮
   sendGreet: function (e) {
     let that = this;
-    if (e.target.errMsg === 'getUserInfo:ok') {
-      wx.getUserInfo({
-        success: function (res) {
-          that.setData({
-            userInfo: res.userInfo
-          })
-          that.getOpenId()
-        }
-      })
-    }
+    wx.getUserInfo({
+      success: function (res) {
+        that.setData({
+          userInfo: res.userInfo
+        })
+        that.getOpenId()
+      }
+    })
   },
 
   // 获取openId

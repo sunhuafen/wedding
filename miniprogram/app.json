@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/invite/invite",
-    "pages/photo/photo",
-    "pages/message/message",
-    "pages/attendInfo/attendInfo",
     "pages/greet/greet",
+    "pages/message/message",
+    "pages/photo/photo",
+    "pages/attendInfo/attendInfo",
     "pages/nav/nav"
   ],
   "window": {
@@ -37,18 +37,18 @@
       {
         "pagePath": "pages/greet/greet",
         "text": "好友祝福",
-        "iconPath": "images/nav/bar_greet.png",
-        "selectedIconPath": "images/nav/bar_greet_active.png"
+        "iconPath": "images/nav/bar_mes.png",
+        "selectedIconPath": "images/nav/bar_mes_active.png"
       },
       {
         "pagePath": "pages/message/message",
         "text": "留言评论",
-        "iconPath": "images/nav/bar_mes.png",
-        "selectedIconPath": "images/nav/bar_mes_active.png"
+        "iconPath": "images/nav/bar_greet.png",
+        "selectedIconPath": "images/nav/bar_greet_active.png"
       }
     ],
     "color": "#ccc",
-    "selectedColor": "#bd3939",
+    "selectedColor": "#945414",
     "backgroundColor": "#fff"
   }
 }
