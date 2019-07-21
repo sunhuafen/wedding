@@ -4,10 +4,14 @@ Page({
 
   data: {
     imgSrc: [
+      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/2.jpg',
+      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/3.jpg',
+      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/4.jpg',
+      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/5.jpg',
+      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/6.jpg',
       'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/7.jpg',
       'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/8.jpg',
       'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/9.jpg',
-      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/6.jpg',
       'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/10.png'
     ],
     isSwitch: false

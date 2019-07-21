@@ -4,8 +4,8 @@
     <image  class='img_39' src='../../images/icon/39.png'></image>
   </view>
   <view class="music posi_fixed {{isPlay? 'music_play':''}}" bindtap='audioPlay'>
-    <image class='img_49' src='../../images/icon/49.png'></image>
-    <!-- <image class='img_50' src='../../images/icon/50.png'></image> -->
+    <image wx:if='{{isPlay}}' class='img_49' src='../../images/icon/49.png'></image>
+    <image wx:else class='img_50' src='../../images/icon/50.png'></image>
   </view>
   <image class='img_13 posi_fixed img_posi1' src='../../images/icon/13.png'></image>
   <image class='img_2 posi_fixed img_posi2' src='../../images/icon/2.png'></image>
@@ -13,7 +13,9 @@
   <image class='img_4 posi_fixed img_posi4' src='../../images/icon/4.png'></image>
   <image class='img_5 posi_fixed img_posi5' src='../../images/icon/5.png'></image>
   <image class='img_6 posi_fixed img_posi6' src='../../images/icon/6.png'></image>
-  <image class='photo_1 posi_fixed img_bor_shadow' src='{{photo}}'></image>
+  <view class='photo_1 posi_fixed img_bor_shadow'>
+    <image class='' mode='aspectFill' src='{{photo}}'></image>
+  </view>
   <image class='img_24 posi_fixed img_posi7' src='../../images/icon/24.png'></image>
   <image class='img_8 posi_fixed img_posi8' src='../../images/icon/8.png'></image>
   <image class='img_7 posi_fixed img_posi9' src='../../images/icon/7.png'></image>

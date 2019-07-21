@@ -4,12 +4,15 @@ const audioCtx = wx.createInnerAudioContext();
 Page({
 
   data: {
-    photo: 'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/6.jpg',
+    photo: 'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/1.jpg',
     isSwitch: false,
     isPlay: true
   },
 
   getMusicUrl() {
+    this.setData({
+      isPlay: true
+    })
     // const that = this
     // const db = wx.cloud.database()
     // const music = db.collection('music')

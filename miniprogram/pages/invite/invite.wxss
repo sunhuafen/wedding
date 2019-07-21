@@ -45,10 +45,15 @@
 .invite .photo_1 {
   left: 50%;
   z-index: 1;
-  margin-left: -247.5rpx;
+  margin-left: -260rpx;
   top: 107rpx;
-  width: 495rpx;
-  height: 340rpx;
+  width: 520rpx;
+  height: 360rpx;
+}
+
+.invite .photo_1  image{
+  width: 100%;
+  height: 100%;
 }
 
 .invite .img_posi7 {
@@ -71,7 +76,7 @@
 
 .invite .img_posi10 {
   z-index: 2;
-  top: 390rpx;
+  top: 410rpx;
   right: 30rpx;
 }
 
@@ -206,12 +211,4 @@
 
 .music_play .img_49 {
   animation: Img-Move-360 infinite 5s linear;
-}
-
-.music .img_50 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -5rpx;
-  margin-top: -9rpx;
 }

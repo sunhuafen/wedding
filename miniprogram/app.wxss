@@ -224,14 +224,9 @@ input[disabled], textarea[disabled] {
   height: 90rpx;
 }
 
-.page .img_49 {
+.page .img_49, .page .img_50 {
   width: 78rpx;
   height: 78rpx;
-}
-
-.page .img_50 {
-  width: 28rpx;
-  height: 36rpx;
 }
 
 .page .img_bor_shadow {
