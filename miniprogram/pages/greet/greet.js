@@ -125,11 +125,10 @@ Page({
     this.getList();
   },
 
-  onReachBottom: function () {
-
-  },
-
   onShareAppMessage: function () {
-
+    return {
+      title: '转发',
+      path: '/pages/greet/greet'
+    }
   }
 });

@@ -243,5 +243,12 @@ Page({
   onLoad: function () {
     // 请求list
     this.getMesList();
+  },
+
+  onShareAppMessage: function () {
+    return {
+      title: '转发',
+      path: '/pages/message/message'
+    }
   }
 })

@@ -59,6 +59,13 @@ Page({
       scale: 16,
       name: '洛阳市-秀水百合酒店百合厅'
     })
-  },
+  }, 
+  
+  onShareAppMessage: function () {
+    return {
+      title: '转发',
+      path: '/pages/nav/nav'
+    }
+  }
 
 })

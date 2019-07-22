@@ -61,4 +61,11 @@ Page({
     this.getMusicUrl();
   },
 
+  onShareAppMessage: function () {
+    return {
+      title: '转发',
+      path: '/pages/invite/invite'
+    }
+  }
+
 })

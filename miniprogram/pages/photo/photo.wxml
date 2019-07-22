@@ -8,7 +8,7 @@
     <image  class='img_40' src='../../images/icon/40.png'></image>
   </view>
   <!-- 滑块 -->
-  <swiper class='swiper' indicator-dots="false" vertical='true' indicator-color='rgba(255,255,255,.3)' indicator-active-color='rgba(255,255,255,.9)' circular='true' autoplay="false" interval="5000" duration="1000">
+  <swiper class='swiper' indicator-dots="false" vertical='true' indicator-color='rgba(255,255,255,.3)' indicator-active-color='rgba(255,255,255,.9)' circular='true' autoplay="true" interval="5000" duration="1000">
     <swiper-item class='item photo1'>
       <view class='bag1 posi_fixed'></view>
       <view class='text1 posi_fixed'></view>

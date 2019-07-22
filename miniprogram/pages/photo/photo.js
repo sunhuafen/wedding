@@ -41,4 +41,11 @@ Page({
     })
   },
 
+  onShareAppMessage: function () {
+    return {
+      title: '转发',
+      path: '/pages/photo/photo'
+    }
+  }
+
 })
