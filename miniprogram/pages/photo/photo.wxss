@@ -485,3 +485,114 @@ page, .page, .swiper, .swiper .item {
   top: 120rpx;
 }
 
+.photo6 .photo {
+  background: #fff;
+  position: fixed;
+}
+
+.photo6 .photo image {
+  width: 100%;
+  height: 100%;
+}
+
+.photo6 .photo1 {
+  height: 45%;
+  top: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+}
+
+.photo6 .photo2 {
+  width: 45%;
+  height: 23%;
+  top: 50%;
+  left: 30rpx;
+}
+
+
+.photo6 .photo3 {
+  width: 45%;
+  height: 48%;
+  top: 50%;
+  right: 30rpx;
+}
+
+
+.photo6 .photo4 {
+  width: 45%;
+  height: 23%;
+  bottom: 2%;
+  left: 30rpx;
+}
+
+.photo6 .img_11 {
+  top: -25rpx;
+  left: -25rpx;
+  z-index: 1;
+  animation: Img-Move-360 infinite 5s linear;
+}
+
+.photo6 .photo image {
+  width: 100%;
+  height: 100%;
+}
+
+.photo6 .img_36 {
+  top: 60rpx;
+  left: 6%;
+}
+
+.photo6 .img_3 {
+  bottom: 0;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo6 .img_4 {
+  bottom: -30rpx;
+  left: 200rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo6 .img_5 {
+  bottom: -30rpx;
+  left: 250rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo6 .img_6 {
+  bottom: -100rpx;
+  left: -20rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo4 .img_22 {
+  bottom: -10rpx;
+  right: 180rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo6 .img_9 {
+  bottom: -10rpx;
+  left: 300rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo6 .img_12 {
+  bottom: -20rpx;
+  right: -20rpx;
+  transform: rotate(-35deg);
+  /* animation: Img-Move-30 infinite 3s linear; */
+}
+
+.photo6 .img_20 {
+  bottom: -5rpx;
+  right: 230rpx;
+  transform: rotate(-90deg);
+}
+
+.photo6 .img_22 {
+  bottom: -10rpx;
+  right: 180rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+

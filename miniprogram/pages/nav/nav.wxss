@@ -49,7 +49,7 @@
   height: 70rpx;
   padding: 0 40rpx;
   border-radius: 35rpx;
-  background: #fdd202;
+  background: #f9d202;
   line-height: 70rpx;
   color: #fff;
 }

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/invite/invite",
     "pages/photo/photo",
+    "pages/invite/invite",
     "pages/greet/greet",
     "pages/message/message",
     "pages/attendInfo/attendInfo",
@@ -11,14 +11,14 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "我的邀请函",
+    "navigationBarTitleText": "婚礼邀请函",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [
       {
         "pagePath": "pages/invite/invite",
-        "text": "婚礼邀请",
+        "text": "邀请函",
         "iconPath": "images/nav/bar_invite.png",
         "selectedIconPath": "images/nav/bar_invite_active.png"
       },
@@ -30,7 +30,7 @@
       },
       {
         "pagePath": "pages/nav/nav",
-        "text": "酒店位置",
+        "text": "婚礼导航",
         "iconPath": "images/nav/bar_nav.png",
         "selectedIconPath": "images/nav/bar_nav_active.png"
       },

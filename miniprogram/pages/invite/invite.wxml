@@ -20,11 +20,11 @@
   <image class='img_8 posi_fixed img_posi8' src='../../images/icon/8.png'></image>
   <image class='img_7 posi_fixed img_posi9' src='../../images/icon/7.png'></image>
   <image class='img_27 posi_fixed img_posi10' src='../../images/icon/27.png'></image>
-  <view class='posi_fixed name'>徐铸  &  孙华芬</view>
-  <view class='posi_fixed text text1'>婚礼谨定于</view>
-  <view class='posi_fixed text text2'>2019年8月26号</view>
-  <view class='posi_fixed text text3'>洛阳市秀水百合酒店百合厅</view>
-  <view class='posi_fixed text text4'>诚挚邀请您的见证</view>
+  <view class='posi_fixed name'>{{info.name}}</view>
+  <view class='posi_fixed text text1'>{{info.text1}}</view>
+  <view class='posi_fixed text text2'>{{info.time}}</view>
+  <view class='posi_fixed text text3'>{{info.nav}}</view>
+  <view class='posi_fixed text text4'>{{info.test2}}</view>
   <image class='img_14 posi_fixed' src='../../images/icon/14.png'></image>
   <image class='img_15 posi_fixed' src='../../images/icon/15.png'></image>
   <view class='posi_fixed img_posi11'>

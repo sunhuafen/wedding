@@ -23,12 +23,20 @@
   border: none;
 }
 
+.mes .btn button::after {
+	 border: none; 
+}
+
 .mes .btn button.left {
-  background: #fdd202;
+  background: #f9d202;
 }
 
 .mes .btn button.right {
-  background: #fdd202;
+  background: #f9d202;
+}
+
+.mes .btn button.cancel {
+  background: #999;
 }
 
 .mes .edit_mes {

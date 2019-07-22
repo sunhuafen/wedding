@@ -68,12 +68,16 @@
   line-height: 70rpx;
 }
 
+.greet .footer .btn button::after {
+	 border: none; 
+}
+
 .greet .footer .btn .one {
-  background: #fdd202;
+  background: #f9d202;
 }
 
 .greet .footer .btn .two {
-  background: #fdd202;
+  background: #f9d202;
 }
 
 .greet .img_23 {

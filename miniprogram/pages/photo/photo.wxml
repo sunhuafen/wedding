@@ -8,8 +8,8 @@
     <image  class='img_40' src='../../images/icon/40.png'></image>
   </view>
   <!-- 滑块 -->
-  <swiper class='swiper' indicator-dots="false" vertical='true' indicator-color='rgba(255,255,255,.3)' indicator-active-color='rgba(255,255,255,.9)' circular='true' autoplay="true" interval="5000" duration="1000">
-    <swiper-item class='item photo1'>
+  <swiper class='swiper' indicator-dots="false" vertical='true' indicator-color='rgba(0,0,0,.5)' indicator-active-color='rgba(0,0,0,.8)' circular='true' autoplay="true" interval="5000" duration="500">
+    <!-- <swiper-item class='item photo1'>
       <view class='bag1 posi_fixed'></view>
       <view class='text1 posi_fixed'></view>
       <image class='img_1 posi_fixed' src='../../images/icon/1.png'></image>
@@ -87,17 +87,42 @@
       <image class='img_48 posi_fixed img_posi29' src='../../images/icon/48.png'></image>
       <image class='img_33 posi_fixed img_posi33' src='../../images/icon/33.png'></image>
       <view class='photo1 posi_fixed img_bor_shadow2'>
-        <image class='' mode='aspectFill' src='{{imgSrc[6]}}'></image>
+        <image mode='aspectFill' src='{{imgSrc[6]}}'></image>
       </view>
       <view class='photo2 posi_fixed img_bor_shadow2'>
-        <image class='' mode='aspectFill' src='{{imgSrc[7]}}'></image>
+        <image mode='aspectFill' src='{{imgSrc[7]}}'></image>
       </view>
       <view class='text posi_fixed'>
         <p>8月26号</p>
         <p>- 敬备喜酌 诚邀光临 -</p>
       </view>
+    </swiper-item> -->
+    <swiper-item class='item photo6'>
+      <view class='bag1 posi_fixed'></view>
+      <view class='text1 posi_fixed'></view>
+      <image class='img_11 posi_fixed' src='../../images/icon/11.png'></image>
+      <image class='img_36 posi_fixed' src='../../images/icon/36.png'></image>
+      <image class='img_12 posi_fixed' src='../../images/icon/12.png'></image>
+      <image class='img_4 posi_fixed' src='../../images/icon/4.png'></image>
+      <image class='img_5 posi_fixed' src='../../images/icon/5.png'></image>
+      <image class='img_6 posi_fixed' src='../../images/icon/6.png'></image>
+      <image class='img_22 posi_fixed' src='../../images/icon/22.png'></image>
+      <image class='img_9 posi_fixed' src='../../images/icon/9.png'></image>
+      <image class='img_20 posi_fixed' src='../../images/icon/20.png'></image>
+      <view class='photo1 photo img_bor_shadow2'>
+        <image mode='aspectFill' src='{{imgSrc[7]}}'></image>
+      </view>
+      <view class='photo2 photo img_bor_shadow2'>
+        <image mode='aspectFill' src='{{imgSrc[7]}}'></image>
+      </view>
+      <view class='photo3 photo img_bor_shadow2'>
+        <image mode='aspectFill' src='{{imgSrc[7]}}'></image>
+      </view>
+      <view class='photo4 photo img_bor_shadow2'>
+        <image mode='aspectFill' src='{{imgSrc[7]}}'></image>
+      </view>
     </swiper-item>
-    <swiper-item class='item photo5'>
+    <!-- <swiper-item class='item photo5'>
       <view class='bag1 posi_fixed'></view>
       <image class='img_23 posi_fixed' src='../../images/icon/23.png'></image>
       <image class='img_18 posi_fixed' src='../../images/icon/18.png'></image>
@@ -113,6 +138,6 @@
       <image class='img_2 posi_fixed' src='../../images/icon/2.png'></image>
       <image class='img_12 posi_fixed' src='../../images/icon/12.png'></image>
       <image class='photo1 posi_fixed' src='{{imgSrc[8]}}'></image>
-    </swiper-item>
+    </swiper-item>-->
   </swiper>
 </view>

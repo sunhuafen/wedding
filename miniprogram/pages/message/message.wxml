@@ -26,11 +26,11 @@
     </view>
     <view class='footer posi_fixed'>
       <view class='edit_mes' wx:if='{{mesIsOpen}}'>
-        <textarea value='{{mesCont}}' bindinput='inputEdit' placeholder='说点啥吧'></textarea>
+        <textarea value='{{mesCont}}' fixed="true" bindinput='inputEdit' placeholder='说点啥吧'></textarea>
       </view>
       <view class='btn' wx:if='{{mesIsOpen}}'>
         <button class='left' bindtap='addMes'>发表留言</button>
-        <button class='right' bindtap='closeEdit'>取消</button>
+        <button class='cancel' bindtap='closeEdit'>取消</button>
       </view>
       <view class='btn' wx:else>
         <button class='left' bindtap='openEdit' open-type="getUserInfo">说点啥吧</button>
@@ -62,19 +62,19 @@
       </view>
       <view class='row row_two'>
         <label class='tit tit_two'>备注</label>
-        <textarea disabled='{{isDisabled}}' name='remark' value='{{attendInfo.remark}}' placeholder='请填写您的备注信息'></textarea>
+        <textarea disabled='{{isDisabled}}' fixed="true" name='remark' value='{{attendInfo.remark}}' placeholder='请填写您的备注信息'></textarea>
       </view>
       <view class='row btn' wx:if='{{isFirst}}'>
         <button form-type="submit" class='left'>确认提交</button>
-        <button class='right' bindtap='changePage'>返回</button>
+        <button class='cancel' bindtap='changePage'>返回</button>
       </view>
       <view class='row btn' wx:elif='{{!isFirst && isDisabled}}'>
         <button class='left' bindtap='isAttendEdit'>重新编辑</button>
-        <button class='right' bindtap='changePage'>返回</button>
+        <button class='cancel' bindtap='changePage'>返回</button>
       </view>
       <view class='row btn' wx:elif='{{!isFirst && !isDisabled}}'>
         <button form-type="submit" class='left'>确认提交</button>
-        <button class='right' bindtap='closeAttendEdit'>取消</button>
+        <button class='cancel' bindtap='closeAttendEdit'>取消</button>
       </view>
       <view class='row row_a' wx-if='{{isMainPeople}}'>
         <navigator url="../attendInfo/attendInfo">出席信息</navigator>
