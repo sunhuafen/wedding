@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/photo/photo",
     "pages/invite/invite",
+    "pages/photo/photo",
     "pages/greet/greet",
     "pages/message/message",
     "pages/attendInfo/attendInfo",

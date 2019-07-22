@@ -12,7 +12,11 @@ Page({
       'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/7.jpg',
       'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/8.jpg',
       'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/9.jpg',
-      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/10.png'
+      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/10.png',
+      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/11.jpg',
+      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/12.jpg',
+      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/13.jpg',
+      'cloud://wedding-e018a3.7765-wedding-e018a3/wedding/photo/14.jpg'
     ],
     isSwitch: false
   },

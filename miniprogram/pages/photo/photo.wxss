@@ -209,8 +209,8 @@ page, .page, .swiper, .swiper .item {
 }
 
 .photo3 .img_posi29 {
-  left: 150rpx;
-  bottom: 150rpx;
+  left: 50rpx;
+  bottom: 10rpx;
   z-index: 3;
 }
 
@@ -237,7 +237,7 @@ page, .page, .swiper, .swiper .item {
 }
 
 .photo3 .text {
-  bottom: 30rpx;
+  bottom: 100rpx;
   width: 400rpx;
   font-size: 32rpx;
 }
