@@ -48,7 +48,7 @@ Page({
   getMesList: function() {
     let cloud = wx.cloud.database();
     let that = this;
-    cloud.collection('mesList').where({}).get({
+    cloud.collection('mesList').orderBy('time', 'desc').get({
       success: res => {
         that.setData({
           mesList: res.data
