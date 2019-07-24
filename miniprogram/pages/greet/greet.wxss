@@ -73,11 +73,11 @@
 }
 
 .greet .footer .btn .one {
-  background: #f9d202;
+  background: #fdd107;
 }
 
 .greet .footer .btn .two {
-  background: #f9d202;
+  background: #fdd107;
 }
 
 .greet .img_23 {

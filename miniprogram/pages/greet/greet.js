@@ -120,7 +120,7 @@ Page({
     })
   },
 
-  onLoad: function () {
+  onShow: function () {
     // 获取祝福列表
     this.getList();
   },

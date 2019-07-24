@@ -12,7 +12,7 @@
   <image class='img_9 posi_fixed' src='../../images/icon/9.png'></image>
   <image class='img_24 posi_fixed' src='../../images/icon/24.png'></image>
   <view wx:if='{{isMainPage}}'>
-    <view class="list posi_fixed {{mesIsOpen? 'list_top':''}}">
+    <view class="list {{mesIsOpen? 'list_top':''}}">
       <view class='item' wx:for='{{mesList}}' wx:key='{{item._id}}'>
         <image class='head' src='{{item.avatarUrl}}'></image>
         <view class='cont'>
@@ -39,7 +39,7 @@
     </view>
   </view>
 
-  <view wx:else class='attend posi_fixed'>
+  <view wx:else class='attend'>
     <view class='title'>出席信息</view>
     <form bindsubmit='attendSubmit' class='attend_form'>
       <view class='row'>
@@ -62,7 +62,7 @@
       </view>
       <view class='row row_two'>
         <label class='tit tit_two'>备注</label>
-        <textarea disabled='{{isDisabled}}' fixed="true" name='remark' value='{{attendInfo.remark}}' placeholder='请填写您的备注信息'></textarea>
+        <textarea disabled='{{isDisabled}}' name='remark' value='{{attendInfo.remark}}' placeholder='请填写您的备注信息'></textarea>
       </view>
       <view class='row btn' wx:if='{{isFirst}}'>
         <button form-type="submit" class='left'>确认提交</button>

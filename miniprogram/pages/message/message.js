@@ -52,7 +52,7 @@ Page({
       success: res => {
         that.setData({
           mesList: res.data
-        })
+        });
       },
       fail: err => {
         wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
@@ -122,7 +122,7 @@ Page({
     }).then(res => {
       let peopleOpenId = res.result.openid;
       let isMainPeople = false;
-      if (peopleOpenId === 'oQKAQ5V2Q-RJ0FbYWBUVuLRHRu3g') { // 主要管理员可以查看出席人信息
+      if (peopleOpenId === 'oQKAQ5V2Q-RJ0FbYWBUVuLRHRu3g' || peopleOpenId === 'oQKAQ5Y8F8srm-vbD-CPd4fLerCQ') { // 主要管理员可以查看出席人信息
         isMainPeople = true;
       }
       that.setData({
@@ -240,7 +240,7 @@ Page({
     this.getIsExist();
   },
 
-  onLoad: function () {
+  onShow: function () {
     // 请求list
     this.getMesList();
   },
