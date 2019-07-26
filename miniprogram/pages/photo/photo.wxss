@@ -65,7 +65,7 @@ page, .page, .swiper, .swiper .item {
   left: -50rpx;
 }
 
-.photo1 .bag1, .photo2 .bag1, .photo3 .bag1, .photo4 .bag1, .photo5 .bag1 {
+.swiper .item .bag1 {
   width: 1000rpx;
   height: 1000rpx;
   background: #f1f8bd;
@@ -391,12 +391,6 @@ page, .page, .swiper, .swiper .item {
   animation: Img-Move-15 infinite 3s linear;
 }
 
-.photo5 .img_18 {
-  top: -130rpx;
-  left: 0rpx;
-  animation: Img-Move-15 infinite 3s linear;
-}
-
 .photo5 .img_7 {
   top: -100rpx;
   left: 280rpx;
@@ -596,3 +590,225 @@ page, .page, .swiper, .swiper .item {
   animation: Img-Move-15 infinite 3s linear;
 }
 
+.photo7 .photo {
+  position: fixed;
+  z-index: 2;
+  background: #fff;
+}
+
+.photo7 .photo image {
+  width: 100%;
+  height: 100%;
+}
+
+.photo7 .photo1 {
+  top: 32rpx;
+  left: 40rpx;
+  width: 62%;
+  height: 28%;
+}
+
+.photo7 .photo2 {
+  bottom: 40rpx;
+  left: 40rpx;
+  width: 43%;
+  height: 43%;
+}
+
+.photo7 .photo3 {
+  top: 33%;
+  right: 40rpx;
+  width: 43%;
+  height: 30%;
+}
+
+.photo7 .photo4 {
+  bottom: 40rpx;
+  right: 40rpx;
+  width: 43%;
+  height: 30%;
+}
+
+.photo7 .img_47 {
+  top: 34%;
+  left: 90rpx;
+}
+
+.photo7 .img_6 {
+  right: 20rpx;
+  bottom: 64%;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo7 .img_18 {
+  top: -130rpx;
+  left: 0rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo7 .img_1 {
+  width: 450rpx;
+  height: 436rpx;
+  top: 0;
+  left: 50%;
+  margin-left: -225rpx;
+  z-index: 1;
+  animation: Img-Move-360 infinite 5s linear;
+}
+
+.photo7 .img_20 {
+  top: 80rpx;
+  left: -50rpx;
+}
+
+.photo7 .posi_6 {
+  bottom: -140rpx;
+  left: -30rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo7 .img_9 {
+  bottom: -20rpx;
+  right: 225rpx;
+  animation: Img-Move-360 infinite 5s linear;
+}
+
+.photo7 .img_5 {
+  bottom: -30rpx;
+  right: 170rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo7 .img_13 {
+  width: 150rpx;
+  height: 146rpx;
+  bottom: -20rpx;
+  left: 150rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo7 .img_2 {
+  bottom: -30rpx;
+  left: 290rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo7 .img_12 {
+  bottom:-40rpx;
+  right:-20rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo7 .img_44 {
+  right: 20rpx;
+  bottom: 200rpx;
+}
+
+.photo8 .photo {
+  position: fixed;
+  z-index: 2;
+  background: #fff;
+}
+
+.photo8 .photo image {
+  width: 100%;
+  height: 100%;
+}
+
+.photo8 .photo1 {
+  top: 40rpx;
+  left: 40rpx;
+  width: 43%;
+  height: 35%;
+}
+
+.photo8 .photo2 {
+  top: 40rpx;
+  right: 40rpx;
+  width: 43%;
+  height: 35%;
+}
+
+.photo8 .photo3 {
+  bottom: 40rpx;
+  right: 40rpx;
+  left: 40rpx;
+  height: 43%;
+}
+
+.photo8 .img_18 {
+  top: -130rpx;
+  left: 0rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo8 .img_1 {
+  width: 450rpx;
+  height: 436rpx;
+  top: 0;
+  left: 50%;
+  margin-left: -225rpx;
+  z-index: 1;
+  animation: Img-Move-360 infinite 5s linear;
+}
+
+.photo8 .img_6 {
+  bottom: -140rpx;
+  left: -30rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo8 .img_9 {
+  bottom: -20rpx;
+  right: 225rpx;
+  animation: Img-Move-360 infinite 5s linear;
+}
+
+.photo8 .img_5 {
+  bottom: -30rpx;
+  right: 170rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo8 .img_13 {
+  width: 150rpx;
+  height: 146rpx;
+  bottom: -20rpx;
+  left: 150rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo8 .img_2 {
+  bottom: -30rpx;
+  left: 290rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo8 .img_12 {
+  bottom:-40rpx;
+  right:-20rpx;
+  animation: Img-Move-15 infinite 3s linear;
+}
+
+.photo8 .img_44 {
+  right: 20rpx;
+  bottom: 200rpx;
+}
+
+.photo8 .img_51 {
+  bottom: 51%;
+  left: 50%;
+  margin-left: -170rpx;
+}
+
+.photo8 .img_20 {
+  top: 38%;
+  right: 40rpx;
+  transform: rotate(112deg);
+}
+
+.photo8 .posi_20 {
+  top: 46%;
+  left: 40rpx;
+  transform: rotate(-71deg);
+}
