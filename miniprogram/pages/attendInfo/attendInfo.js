@@ -7,48 +7,36 @@ Page({
 
   // 获取列表
   getAttendList: function() {
-    let cloud = wx.cloud.database();
+    wx.showLoading();
     let that = this;
-    let batchTimes = 10;
-    let attends = [];
-    cloud.collection('attendList').get({
-      success: res => {
-        for (let j = 0; j < res.data.length; j++) {
-          attends.push(res.data[j])
-          that.setData({
-            attendList: attends
-          })
+    let cloud = wx.cloud.database();
+    let promises = [];
+    let total = 0;
+    cloud.collection('attendList').count().then(res => {
+      total = res.total;
+      let batchTimes = Math.ceil(total / 20);
+      for (let i = 0; i < batchTimes; i++) {
+        let promise;
+        if (i == 0) {
+          promise = cloud.collection('attendList').get();
+        } else {
+          promise = cloud.collection('attendList').skip(i * 20).limit(20).get();
         }
+        promises.push(promise)
       }
-    })
-    for (let i = 1; i < batchTimes; i++) {
-      let MAX_LIMIT = 20 * i;
-      cloud.collection('attendList').skip(MAX_LIMIT).limit(20).get({
-        success: res => {
-          if (res.data.length > 0) {
-            for (let j = 0; j < res.data.length; j++) {
-              attends.push(res.data[j])
-              that.setData({
-                attendList: attends
-              })
-            }
+      Promise.all(promises).then(res => {
+        wx.hideLoading();
+        let attendLists = [];
+        for (let j = 0; j < res.length; j++) {
+          for (let k = 0; k < res[j].data.length; k++) {
+            attendLists.push(res[j].data[k]);
           }
         }
+        that.setData({
+          attendList: attendLists.reverse()
+        })
       })
-    }
-
-
-    // cloud.collection('attendList').where({}).get({
-    //   success: res => {
-    //     console.log(res);
-    //     that.setData({
-    //       attendList: res.data
-    //     })
-    //   },
-    //   fail: err => {
-    //     wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
-    //   }
-    // })
+    });
   },
 
   onLoad: function () {

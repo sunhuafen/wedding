@@ -46,44 +46,36 @@ Page({
 
   // 获取留言列表
   getMesList: function() {
-    // const cloud = require('wx-server-sdk')
-    // cloud.init()
-    // const db = cloud.database()
-    // exports.main = async (event, context) => {
-    //   return await db.collection('mesList')
-    //     .skip(10) // 跳过结果集中的前 10 条，从第 11 条开始返回
-    //     .limit(10) // 限制返回数量为 10 条
-    //     .get()
-    // }
-    let cloud = wx.cloud.database();
+    wx.showLoading();
     let that = this;
-    let batchTimes = 10;
-    let megs = [];
-    cloud.collection('mesList').orderBy('time', 'desc').get({
-      success: res => {
-        for (let j = 0; j < res.data.length; j++) {
-          megs.push(res.data[j])
-          that.setData({
-            mesList: megs
-          })
+    let cloud = wx.cloud.database();
+    let promises = [];
+    let total = 0;
+    cloud.collection('mesList').count().then(res => {
+      total = res.total;
+      let batchTimes = Math.ceil(total / 20);
+      for (let i = 0; i < batchTimes; i++) {
+        let promise;
+        if (i == 0) {
+          promise = cloud.collection('mesList').get();
+        } else {
+          promise = cloud.collection('mesList').skip(i * 20).limit(20).get();
         }
+        promises.push(promise)
       }
-    })
-    for (let i = 1; i < batchTimes; i++) {
-      let MAX_LIMIT = 20 * i;
-      cloud.collection('mesList').orderBy('time', 'desc').skip(MAX_LIMIT).limit(20).get({
-        success: res => {
-          if (res.data.length > 0) {
-            for (let j = 0; j < res.data.length; j++) {
-              megs.push(res.data[j])
-              that.setData({
-                mesList: megs
-              })
-            }
+      Promise.all(promises).then(res => {
+        wx.hideLoading();
+        let mesLists = [];
+        for (let j = 0; j < res.length; j++) {
+          for (let k = 0; k < res[j].data.length; k++) {
+            mesLists.push(res[j].data[k]);
           }
         }
+        that.setData({
+          mesList: mesLists.reverse()
+        })
       })
-    }
+    });
   },
 
   // 添加评论

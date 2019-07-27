@@ -105,37 +105,37 @@ Page({
 
   // 获取祝福列表
   getList: function() {
+    wx.showLoading();
     let that = this;
     let cloud = wx.cloud.database();
-    let batchTimes = 10;
-    let greets = [];
-    cloud.collection('greetList').get({
-      success: res => {
-        for (let j = 0; j < res.data.length; j++) {
-          greets.push(res.data[j])
-          that.setData({
-            greetList: greets,
-            greetNum: greets.length
-          })
+    let promises = [];
+    let total = 0;
+    cloud.collection('greetList').count().then( res => {
+      total = res.total;
+      let batchTimes = Math.ceil(total / 20);
+      for (let i = 0; i < batchTimes; i++) {
+        let promise;
+        if(i==0) {
+          promise = cloud.collection('greetList').get();
+        }else{
+          promise = cloud.collection('greetList').skip(i * 20).limit(20).get();
         }
+        promises.push(promise)
       }
-    })
-    for (let i = 1; i < batchTimes; i++) {
-      let MAX_LIMIT = 20 * i;
-      cloud.collection('greetList').skip(MAX_LIMIT).limit(20).get({
-        success: res => {
-          if (res.data.length > 0) {
-            for (let j = 0; j < res.data.length; j++) {
-              greets.push(res.data[j])
-              that.setData({
-                greetList: greets,
-                greetNum: greets.length
-              })
-            }
+      Promise.all(promises).then( res => {
+        wx.hideLoading();
+        let greetLists = [];
+        for(let j=0; j< res.length; j++) {
+          for(let k=0; k< res[j].data.length; k++) {
+            greetLists.push(res[j].data[k]);
           }
         }
+        that.setData({
+          greetList: greetLists.reverse(),
+          greetNum: total
+        })
       })
-    }
+    });
   },
 
   onShow: function () {
