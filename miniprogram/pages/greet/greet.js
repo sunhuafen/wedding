@@ -107,17 +107,35 @@ Page({
   getList: function() {
     let that = this;
     let cloud = wx.cloud.database();
-    cloud.collection('greetList').where({}).get({
+    let batchTimes = 10;
+    let greets = [];
+    cloud.collection('greetList').get({
       success: res => {
-        that.setData({
-          greetList: res.data,
-          greetNum: res.data.length
-        })
-      },
-      fail: err => {
-        wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
+        for (let j = 0; j < res.data.length; j++) {
+          greets.push(res.data[j])
+          that.setData({
+            greetList: greets,
+            greetNum: greets.length
+          })
+        }
       }
     })
+    for (let i = 1; i < batchTimes; i++) {
+      let MAX_LIMIT = 20 * i;
+      cloud.collection('greetList').skip(MAX_LIMIT).limit(20).get({
+        success: res => {
+          if (res.data.length > 0) {
+            for (let j = 0; j < res.data.length; j++) {
+              greets.push(res.data[j])
+              that.setData({
+                greetList: greets,
+                greetNum: greets.length
+              })
+            }
+          }
+        }
+      })
+    }
   },
 
   onShow: function () {

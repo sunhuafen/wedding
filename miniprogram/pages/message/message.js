@@ -46,18 +46,44 @@ Page({
 
   // 获取留言列表
   getMesList: function() {
+    // const cloud = require('wx-server-sdk')
+    // cloud.init()
+    // const db = cloud.database()
+    // exports.main = async (event, context) => {
+    //   return await db.collection('mesList')
+    //     .skip(10) // 跳过结果集中的前 10 条，从第 11 条开始返回
+    //     .limit(10) // 限制返回数量为 10 条
+    //     .get()
+    // }
     let cloud = wx.cloud.database();
     let that = this;
+    let batchTimes = 10;
+    let megs = [];
     cloud.collection('mesList').orderBy('time', 'desc').get({
       success: res => {
-        that.setData({
-          mesList: res.data
-        });
-      },
-      fail: err => {
-        wx.showToast({ icon: 'none', title: '网络异常，请稍后再试' });
+        for (let j = 0; j < res.data.length; j++) {
+          megs.push(res.data[j])
+          that.setData({
+            mesList: megs
+          })
+        }
       }
     })
+    for (let i = 1; i < batchTimes; i++) {
+      let MAX_LIMIT = 20 * i;
+      cloud.collection('mesList').orderBy('time', 'desc').skip(MAX_LIMIT).limit(20).get({
+        success: res => {
+          if (res.data.length > 0) {
+            for (let j = 0; j < res.data.length; j++) {
+              megs.push(res.data[j])
+              that.setData({
+                mesList: megs
+              })
+            }
+          }
+        }
+      })
+    }
   },
 
   // 添加评论
